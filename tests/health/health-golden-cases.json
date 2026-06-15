@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "2026-06-15",
+  "generatedAt": "2026-06-15T17:08:04.640Z",
+  "project": "Edinici.ru public calculation golden cases",
+  "source": {
+    "site": "https://edinici.ru",
+    "methodology": "https://edinici.ru/methodology#avtotesty",
+    "qaReportGeneratedAt": "2026-06-15T16:47:31.641Z",
+    "formulaParityChecks": 651,
+    "qaSuites": 37
+  },
+  "cases": [
+    {
+      "id": "bmi-healthy-range",
+      "title": "BMI in healthy adult range",
+      "category": "health",
+      "calculator": "bmi-calculator",
+      "sourcePath": "/health/bmi-calculator",
+      "input": {
+        "height": "180",
+        "weight": "75",
+        "waist": "82"
+      },
+      "expected": {
+        "bmi": 23.1481,
+        "category": "Здоровый диапазон",
+        "healthyMinWeight": 59.94,
+        "healthyMaxWeight": 80.676,
+        "waistToHeight": 0.455556,
+        "waistLabel": "Талия в целевом диапазоне"
+      },
+      "tolerance": {
+        "bmi": 0.0001,
+        "ratio": 0.000001
+      },
+      "standards": [
+        "WHO adult BMI classification"
+      ],
+      "notes": [
+        "Informational adult screening calculation, not a diagnosis."
+      ]
+    },
+    {
+      "id": "bmi-obesity-class-one",
+      "title": "BMI in obesity class I adult range",
+      "category": "health",
+      "calculator": "bmi-calculator",
+      "sourcePath": "/health/bmi-calculator",
+      "input": {
+        "height": "170",
+        "weight": "92",
+        "waist": "102"
+      },
+      "expected": {
+        "bmi": 31.8339,
+        "category": "Ожирение I степени",
+        "healthyMinWeight": 53.465,
+        "healthyMaxWeight": 71.961,
+        "waistToHeight": 0.6,
+        "waistLabel": "Высокое отношение талии к росту"
+      },
+      "tolerance": {
+        "bmi": 0.0001,
+        "ratio": 0.000001
+      },
+      "standards": [
+        "WHO adult BMI classification"
+      ],
+      "notes": [
+        "Informational adult screening calculation, not a diagnosis."
+      ]
+    },
+    {
+      "id": "body-fat-jp3-male",
+      "title": "Body fat, Jackson-Pollock 3-site male",
+      "category": "health",
+      "calculator": "fat-percentage-calculator",
+      "sourcePath": "/health/fat-percentage-calculator",
+      "input": {
+        "gender": "male",
+        "method": "jp3",
+        "age": "30",
+        "weight": "80",
+        "measurements": {
+          "chest": "10",
+          "abdomen": "20",
+          "thigh": "15",
+          "triceps": "12",
+          "suprailiac": "15",
+          "midaxillary": "12",
+          "subscapular": "14"
+        }
+      },
+      "expected": {
+        "sum": 45,
+        "bodyDensity": 1.0676965,
+        "fatPercent": 13.6149,
+        "category": "Атлетический",
+        "fatMass": 10.8919,
+        "leanMass": 69.1081
+      },
+      "tolerance": {
+        "percentPoints": 0.0001,
+        "kilogram": 0.0001
+      },
+      "standards": [
+        "Jackson-Pollock skinfold equations",
+        "Siri body density equation"
+      ],
+      "notes": [
+        "Informational body composition estimate, not a medical diagnosis."
+      ]
+    },
+    {
+      "id": "body-fat-jp7-female",
+      "title": "Body fat, Jackson-Pollock 7-site female",
+      "category": "health",
+      "calculator": "fat-percentage-calculator",
+      "sourcePath": "/health/fat-percentage-calculator",
+      "input": {
+        "gender": "female",
+        "method": "jp7",
+        "age": "35",
+        "weight": "65",
+        "measurements": {
+          "chest": "12",
+          "abdomen": "24",
+          "thigh": "26",
+          "triceps": "18",
+          "suprailiac": "20",
+          "midaxillary": "14",
+          "subscapular": "16"
+        }
+      },
+      "expected": {
+        "sum": 130,
+        "bodyDensity": 1.0409119,
+        "fatPercent": 25.5446,
+        "category": "Средний",
+        "fatMass": 16.604,
+        "leanMass": 48.396
+      },
+      "tolerance": {
+        "percentPoints": 0.0001,
+        "kilogram": 0.0001
+      },
+      "standards": [
+        "Jackson-Pollock skinfold equations",
+        "Siri body density equation"
+      ],
+      "notes": [
+        "Informational body composition estimate, not a medical diagnosis."
+      ]
+    }
+  ]
+}

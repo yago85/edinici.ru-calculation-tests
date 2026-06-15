@@ -1,0 +1,674 @@
+{
+  "schemaVersion": "2026-06-15",
+  "generatedAt": "2026-06-15T17:08:04.640Z",
+  "project": "Edinici.ru public calculation golden cases",
+  "source": {
+    "site": "https://edinici.ru",
+    "methodology": "https://edinici.ru/methodology#avtotesty",
+    "qaReportGeneratedAt": "2026-06-15T16:47:31.641Z",
+    "formulaParityChecks": 651,
+    "qaSuites": 37
+  },
+  "cases": [
+    {
+      "id": "credit-annuity-basic",
+      "title": "Consumer credit, annuity payments",
+      "category": "fintech",
+      "calculator": "credit-calculator",
+      "sourcePath": "/finance/credit-calculator",
+      "input": {
+        "amount": "500000",
+        "currency": "RUB",
+        "term": "36",
+        "termUnit": "months",
+        "rate": "19.5",
+        "rateUnit": "year",
+        "initialPayment": "0",
+        "initialPaymentMode": "currency",
+        "oneTimeCommission": "0",
+        "oneTimeCommissionMode": "percent",
+        "oneTimeCommissionScope": "required",
+        "monthlyCommission": "0",
+        "monthlyCommissionMode": "percent_amount",
+        "monthlyCommissionScope": "required",
+        "paymentType": "annuity",
+        "firstMonth": "6",
+        "firstYear": "2026",
+        "calcTarget": "amount",
+        "targetPayment": "30000",
+        "weekendShift": "none",
+        "actualDayInterest": false,
+        "rateChanges": [],
+        "prepayments": []
+      },
+      "expected": {
+        "principal": 500000,
+        "firstPayment": 18454.66,
+        "lastPayment": 18454.41,
+        "totalPayment": 664367.51,
+        "totalInterest": 164367.51,
+        "overpayment": 164367.51,
+        "overpaymentPercent": 32.8735,
+        "actualTermMonths": 36
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "percentPoints": 0.0001
+      },
+      "standards": [
+        "Standard annuity and differentiated loan formulas"
+      ]
+    },
+    {
+      "id": "credit-differentiated-with-prepayment",
+      "title": "Consumer credit, differentiated payments with prepayment",
+      "category": "fintech",
+      "calculator": "credit-calculator",
+      "sourcePath": "/finance/credit-calculator",
+      "input": {
+        "amount": "1200000",
+        "currency": "RUB",
+        "term": "48",
+        "termUnit": "months",
+        "rate": "18",
+        "rateUnit": "year",
+        "initialPayment": "0",
+        "initialPaymentMode": "currency",
+        "oneTimeCommission": "0",
+        "oneTimeCommissionMode": "percent",
+        "oneTimeCommissionScope": "required",
+        "monthlyCommission": "0",
+        "monthlyCommissionMode": "percent_amount",
+        "monthlyCommissionScope": "required",
+        "paymentType": "differentiated",
+        "firstMonth": "6",
+        "firstYear": "2026",
+        "calcTarget": "amount",
+        "targetPayment": "30000",
+        "weekendShift": "none",
+        "actualDayInterest": false,
+        "rateChanges": [],
+        "prepayments": [
+          {
+            "id": "prepay-1",
+            "month": "6",
+            "year": "2026",
+            "amount": "100000",
+            "strategy": "reduce_term",
+            "frequency": "once"
+          }
+        ]
+      },
+      "expected": {
+        "principal": 1200000,
+        "firstPayment": 143000,
+        "lastPayment": 25375,
+        "totalPayment": 1572750,
+        "totalInterest": 372750,
+        "overpayment": 372750,
+        "overpaymentPercent": 31.0625,
+        "actualTermMonths": 44
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "percentPoints": 0.0001
+      },
+      "standards": [
+        "Standard annuity and differentiated loan formulas"
+      ]
+    },
+    {
+      "id": "mortgage-free-market-with-insurance",
+      "title": "Mortgage with property and life insurance",
+      "category": "fintech",
+      "calculator": "ipotechniy-kalkulyator",
+      "sourcePath": "/finance/ipotechniy-kalkulyator",
+      "input": {
+        "amount": "8000000",
+        "currency": "RUB",
+        "term": "20",
+        "termUnit": "years",
+        "rate": "17.3",
+        "rateUnit": "year",
+        "initialPayment": "25",
+        "initialPaymentMode": "percent",
+        "oneTimeCommission": "0",
+        "oneTimeCommissionMode": "percent",
+        "oneTimeCommissionScope": "required",
+        "monthlyCommission": "0",
+        "monthlyCommissionMode": "percent_amount",
+        "monthlyCommissionScope": "required",
+        "paymentType": "annuity",
+        "firstMonth": "6",
+        "firstYear": "2026",
+        "calcTarget": "amount",
+        "targetPayment": "80000",
+        "weekendShift": "none",
+        "actualDayInterest": false,
+        "rateChanges": [],
+        "prepayments": [],
+        "program": "free",
+        "propertyType": "new",
+        "propertyInsuranceEnabled": true,
+        "propertyInsuranceRate": "0.15",
+        "lifeInsuranceEnabled": true,
+        "lifeInsuranceRate": "0.5",
+        "lifeInsuranceDiscount": "0.7",
+        "monthlyIncome": "260000",
+        "monthlyRent": "45000"
+      },
+      "expected": {
+        "propertyPrice": 8000000,
+        "principal": 6000000,
+        "firstPayment": 86187.64,
+        "totalPayment": 20685031.68,
+        "totalInterest": 14685031.68,
+        "totalInsurance": 575016.39,
+        "totalCost": 21260048.07,
+        "actualTermMonths": 240
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "percentPoints": 0.0001
+      },
+      "standards": [
+        "Russian mortgage program limits",
+        "Russian Tax Code, Article 220"
+      ]
+    },
+    {
+      "id": "mortgage-family-program",
+      "title": "Family mortgage program baseline",
+      "category": "fintech",
+      "calculator": "ipotechniy-kalkulyator",
+      "sourcePath": "/finance/ipotechniy-kalkulyator",
+      "input": {
+        "amount": "9000000",
+        "currency": "RUB",
+        "term": "25",
+        "termUnit": "years",
+        "rate": "6",
+        "rateUnit": "year",
+        "initialPayment": "30",
+        "initialPaymentMode": "percent",
+        "oneTimeCommission": "0",
+        "oneTimeCommissionMode": "percent",
+        "oneTimeCommissionScope": "required",
+        "monthlyCommission": "0",
+        "monthlyCommissionMode": "percent_amount",
+        "monthlyCommissionScope": "required",
+        "paymentType": "annuity",
+        "firstMonth": "6",
+        "firstYear": "2026",
+        "calcTarget": "amount",
+        "targetPayment": "80000",
+        "weekendShift": "none",
+        "actualDayInterest": false,
+        "rateChanges": [],
+        "prepayments": [],
+        "program": "family",
+        "propertyType": "new",
+        "propertyInsuranceEnabled": true,
+        "propertyInsuranceRate": "0.15",
+        "lifeInsuranceEnabled": true,
+        "lifeInsuranceRate": "0.5",
+        "lifeInsuranceDiscount": "0.7",
+        "monthlyIncome": "220000",
+        "monthlyRent": "45000"
+      },
+      "expected": {
+        "propertyPrice": 9000000,
+        "principal": 6300000,
+        "firstPayment": 37938.68,
+        "totalPayment": 11381601,
+        "totalInterest": 5081601,
+        "totalInsurance": 623215.26,
+        "totalCost": 12004816.26,
+        "actualTermMonths": 300
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "percentPoints": 0.0001
+      },
+      "standards": [
+        "Russian mortgage program limits",
+        "Russian Tax Code, Article 220"
+      ]
+    },
+    {
+      "id": "auto-credit-new-car",
+      "title": "Auto credit for a new car with insurance",
+      "category": "fintech",
+      "calculator": "avtokreditnyy-kalkulyator",
+      "sourcePath": "/finance/avtokreditnyy-kalkulyator",
+      "input": {
+        "amount": "3500000",
+        "currency": "RUB",
+        "term": "60",
+        "termUnit": "months",
+        "rate": "18",
+        "rateUnit": "year",
+        "initialPayment": "25",
+        "initialPaymentMode": "percent",
+        "oneTimeCommission": "0",
+        "oneTimeCommissionMode": "percent",
+        "oneTimeCommissionScope": "required",
+        "monthlyCommission": "0",
+        "monthlyCommissionMode": "percent_amount",
+        "monthlyCommissionScope": "required",
+        "paymentType": "annuity",
+        "firstMonth": "6",
+        "firstYear": "2026",
+        "calcTarget": "amount",
+        "targetPayment": "50000",
+        "weekendShift": "none",
+        "actualDayInterest": false,
+        "rateChanges": [],
+        "prepayments": [],
+        "program": "standard",
+        "autoStatus": "new",
+        "sellerType": "dealer",
+        "stateSupportRegion": "standard",
+        "stateSupportCategory": "education",
+        "tradeInEnabled": false,
+        "tradeInValue": "0",
+        "cascoEnabled": true,
+        "cascoRate": "5",
+        "cascoInBody": false,
+        "lifeInsuranceEnabled": true,
+        "lifeInsuranceRate": "1",
+        "lifeInBody": false,
+        "pledgeEnabled": true,
+        "residualPaymentEnabled": false,
+        "residualPaymentPercent": "30"
+      },
+      "expected": {
+        "carPrice": 3500000,
+        "financedAmount": 2625000,
+        "customerDownPayment": 875000,
+        "stateSubsidy": 0,
+        "firstPayment": 65238.01,
+        "totalPayment": 3914280.77,
+        "totalInsurance": 306250,
+        "totalCost": 4220530.77,
+        "actualTermMonths": 60
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "percentPoints": 0.0001
+      },
+      "standards": [
+        "Russian auto credit program constraints"
+      ]
+    },
+    {
+      "id": "auto-credit-used-car-trade-in",
+      "title": "Auto credit for a used car with trade-in",
+      "category": "fintech",
+      "calculator": "avtokreditnyy-kalkulyator",
+      "sourcePath": "/finance/avtokreditnyy-kalkulyator",
+      "input": {
+        "amount": "2600000",
+        "currency": "RUB",
+        "term": "48",
+        "termUnit": "months",
+        "rate": "20",
+        "rateUnit": "year",
+        "initialPayment": "15",
+        "initialPaymentMode": "percent",
+        "oneTimeCommission": "0",
+        "oneTimeCommissionMode": "percent",
+        "oneTimeCommissionScope": "required",
+        "monthlyCommission": "0",
+        "monthlyCommissionMode": "percent_amount",
+        "monthlyCommissionScope": "required",
+        "paymentType": "annuity",
+        "firstMonth": "6",
+        "firstYear": "2026",
+        "calcTarget": "amount",
+        "targetPayment": "50000",
+        "weekendShift": "none",
+        "actualDayInterest": false,
+        "rateChanges": [],
+        "prepayments": [],
+        "program": "standard",
+        "autoStatus": "used",
+        "sellerType": "dealer",
+        "stateSupportRegion": "standard",
+        "stateSupportCategory": "education",
+        "tradeInEnabled": true,
+        "tradeInValue": "450000",
+        "cascoEnabled": true,
+        "cascoRate": "5",
+        "cascoInBody": false,
+        "lifeInsuranceEnabled": false,
+        "lifeInsuranceRate": "1",
+        "lifeInBody": false,
+        "pledgeEnabled": true,
+        "residualPaymentEnabled": false,
+        "residualPaymentPercent": "30"
+      },
+      "expected": {
+        "carPrice": 2600000,
+        "financedAmount": 1760000,
+        "customerDownPayment": 390000,
+        "stateSubsidy": 0,
+        "firstPayment": 57379.23,
+        "totalPayment": 2754203.12,
+        "totalInsurance": 130000,
+        "totalCost": 2884203.12,
+        "actualTermMonths": 48
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "percentPoints": 0.0001
+      },
+      "standards": [
+        "Russian auto credit program constraints"
+      ]
+    },
+    {
+      "id": "salary-tk-standard",
+      "title": "Employment contract, standard tariff",
+      "category": "fintech",
+      "calculator": "salary-calculator",
+      "sourcePath": "/finance/salary-calculator",
+      "input": {
+        "employment": "tk",
+        "constants": {
+          "year": 2026,
+          "ndflBrackets": [
+            {
+              "limit": 2400000,
+              "rate": 0.13
+            },
+            {
+              "limit": 5000000,
+              "rate": 0.15
+            },
+            {
+              "limit": 20000000,
+              "rate": 0.18
+            },
+            {
+              "limit": 50000000,
+              "rate": 0.2
+            },
+            {
+              "limit": null,
+              "rate": 0.22
+            }
+          ],
+          "contributionBaseLimit": 2979000,
+          "contributionRateBase": 0.3,
+          "contributionRateOver": 0.151,
+          "itRate": 0.076,
+          "injuryRate": 0.002,
+          "ipFixedContribution": 57390,
+          "ipOnePercentThreshold": 300000,
+          "ipOnePercentCap": 321818,
+          "ausnInjuryFixed": 2959,
+          "mrot": 27093,
+          "npdAnnualLimit": 2400000,
+          "childDeductionIncomeLimit": 450000,
+          "childDeduction": {
+            "first": 1400,
+            "second": 2800,
+            "thirdPlus": 6000
+          },
+          "workingDaysByMonth": [
+            15,
+            19,
+            22,
+            22,
+            18,
+            20,
+            23,
+            21,
+            22,
+            22,
+            19,
+            23
+          ]
+        },
+        "monthlyBase": 150000,
+        "annualBonus": 0,
+        "regionalMultiplier": 1,
+        "tariff": "standard",
+        "gphInjury": false,
+        "childDeductionMonthly": 0,
+        "propertyDeduction": 0,
+        "socialDeduction": 0,
+        "event": {
+          "month": -1,
+          "kind": "vacation",
+          "days": 0,
+          "prevYearIncome": 0
+        },
+        "npdClient": "company",
+        "ipRegime": "usn",
+        "startMonth": 0,
+        "priorYtdGross": 0
+      },
+      "expected": {
+        "annualGross": 1800000,
+        "annualTax": 234000,
+        "annualNet": 1566000,
+        "annualContributions": 543600,
+        "fullCost": 2343600,
+        "effectiveTaxRate": 13,
+        "averageNet": 130500
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "ratio": 0.000001
+      },
+      "standards": [
+        "Russian Tax Code, Article 224",
+        "Russian Tax Code, Chapter 34"
+      ]
+    },
+    {
+      "id": "salary-npd-company-client",
+      "title": "Self-employed income from company client",
+      "category": "fintech",
+      "calculator": "salary-calculator",
+      "sourcePath": "/finance/salary-calculator",
+      "input": {
+        "employment": "npd",
+        "constants": {
+          "year": 2026,
+          "ndflBrackets": [
+            {
+              "limit": 2400000,
+              "rate": 0.13
+            },
+            {
+              "limit": 5000000,
+              "rate": 0.15
+            },
+            {
+              "limit": 20000000,
+              "rate": 0.18
+            },
+            {
+              "limit": 50000000,
+              "rate": 0.2
+            },
+            {
+              "limit": null,
+              "rate": 0.22
+            }
+          ],
+          "contributionBaseLimit": 2979000,
+          "contributionRateBase": 0.3,
+          "contributionRateOver": 0.151,
+          "itRate": 0.076,
+          "injuryRate": 0.002,
+          "ipFixedContribution": 57390,
+          "ipOnePercentThreshold": 300000,
+          "ipOnePercentCap": 321818,
+          "ausnInjuryFixed": 2959,
+          "mrot": 27093,
+          "npdAnnualLimit": 2400000,
+          "childDeductionIncomeLimit": 450000,
+          "childDeduction": {
+            "first": 1400,
+            "second": 2800,
+            "thirdPlus": 6000
+          },
+          "workingDaysByMonth": [
+            15,
+            19,
+            22,
+            22,
+            18,
+            20,
+            23,
+            21,
+            22,
+            22,
+            19,
+            23
+          ]
+        },
+        "monthlyBase": 150000,
+        "annualBonus": 0,
+        "regionalMultiplier": 1,
+        "tariff": "standard",
+        "gphInjury": false,
+        "childDeductionMonthly": 0,
+        "propertyDeduction": 0,
+        "socialDeduction": 0,
+        "event": {
+          "month": -1,
+          "kind": "vacation",
+          "days": 0,
+          "prevYearIncome": 0
+        },
+        "npdClient": "company",
+        "ipRegime": "usn",
+        "startMonth": 0,
+        "priorYtdGross": 0
+      },
+      "expected": {
+        "annualGross": 1800000,
+        "annualTax": 108000,
+        "annualNet": 1692000,
+        "annualContributions": 0,
+        "fullCost": 1800000,
+        "effectiveTaxRate": 6,
+        "averageNet": 141000
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "ratio": 0.000001
+      },
+      "standards": [
+        "Russian Tax Code, Article 224",
+        "Russian Tax Code, Chapter 34"
+      ]
+    },
+    {
+      "id": "salary-ip-usn",
+      "title": "Individual entrepreneur, simplified tax system",
+      "category": "fintech",
+      "calculator": "salary-calculator",
+      "sourcePath": "/finance/salary-calculator",
+      "input": {
+        "employment": "ip",
+        "constants": {
+          "year": 2026,
+          "ndflBrackets": [
+            {
+              "limit": 2400000,
+              "rate": 0.13
+            },
+            {
+              "limit": 5000000,
+              "rate": 0.15
+            },
+            {
+              "limit": 20000000,
+              "rate": 0.18
+            },
+            {
+              "limit": 50000000,
+              "rate": 0.2
+            },
+            {
+              "limit": null,
+              "rate": 0.22
+            }
+          ],
+          "contributionBaseLimit": 2979000,
+          "contributionRateBase": 0.3,
+          "contributionRateOver": 0.151,
+          "itRate": 0.076,
+          "injuryRate": 0.002,
+          "ipFixedContribution": 57390,
+          "ipOnePercentThreshold": 300000,
+          "ipOnePercentCap": 321818,
+          "ausnInjuryFixed": 2959,
+          "mrot": 27093,
+          "npdAnnualLimit": 2400000,
+          "childDeductionIncomeLimit": 450000,
+          "childDeduction": {
+            "first": 1400,
+            "second": 2800,
+            "thirdPlus": 6000
+          },
+          "workingDaysByMonth": [
+            15,
+            19,
+            22,
+            22,
+            18,
+            20,
+            23,
+            21,
+            22,
+            22,
+            19,
+            23
+          ]
+        },
+        "monthlyBase": 300000,
+        "annualBonus": 0,
+        "regionalMultiplier": 1,
+        "tariff": "standard",
+        "gphInjury": false,
+        "childDeductionMonthly": 0,
+        "propertyDeduction": 0,
+        "socialDeduction": 0,
+        "event": {
+          "month": -1,
+          "kind": "vacation",
+          "days": 0,
+          "prevYearIncome": 0
+        },
+        "npdClient": "company",
+        "ipRegime": "usn",
+        "startMonth": 0,
+        "priorYtdGross": 0
+      },
+      "expected": {
+        "annualGross": 3600000,
+        "annualTax": 125610,
+        "annualNet": 3384000,
+        "annualContributions": 90390,
+        "fullCost": 3600000,
+        "effectiveTaxRate": 6,
+        "averageNet": 282000
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "ratio": 0.000001
+      },
+      "standards": [
+        "Russian Tax Code, Article 224",
+        "Russian Tax Code, Chapter 34"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "2026-06-15",
+  "generatedAt": "2026-06-15T17:08:04.636Z",
+  "project": "Edinici.ru public calculation golden cases",
+  "source": {
+    "site": "https://edinici.ru",
+    "methodology": "https://edinici.ru/methodology#avtotesty",
+    "qaReportGeneratedAt": "2026-06-15T16:47:31.641Z",
+    "formulaParityChecks": 651,
+    "qaSuites": 37
+  },
+  "cases": [
+    {
+      "id": "deposit-simple-maturity",
+      "title": "Deposit, simple interest paid at maturity",
+      "category": "fintech",
+      "calculator": "deposit-calculator",
+      "sourcePath": "/finance/deposit-calculator",
+      "input": {
+        "id": "public-deposit",
+        "name": "Public golden case",
+        "amount": 100000,
+        "currency": "RUB",
+        "rate": 12,
+        "months": 12,
+        "termUnit": "months",
+        "startDate": "2025-01-01",
+        "capitalize": false,
+        "interestFrequency": "maturity",
+        "customIntervalValue": 30,
+        "dateShift": "next",
+        "keyRate": 0,
+        "keyRateManual": false,
+        "taxRate": 0,
+        "startCurrencyRate": 1,
+        "endCurrencyRate": 1,
+        "currencyRateManual": false,
+        "minBalance": 0,
+        "earlyCloseEnabled": false,
+        "earlyCloseDate": "",
+        "earlyCloseRate": 0.01,
+        "earlyPayoutHandling": "deduct_from_principal",
+        "eventsEnabled": false,
+        "events": []
+      },
+      "expected": {
+        "finalBalance": 100000,
+        "grossFinal": 112000,
+        "paidOut": 12000,
+        "totalInterest": 12000,
+        "totalTaxRub": 0,
+        "netProfit": 12000,
+        "contributions": 100000,
+        "withdrawals": 0,
+        "endDate": "2026-01-01",
+        "issueCount": 0
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "ratio": "exact unless stated"
+      },
+      "standards": [
+        "ACT/365 day count where applicable",
+        "Russian Tax Code, Article 214.2"
+      ]
+    },
+    {
+      "id": "deposit-monthly-capitalization",
+      "title": "Deposit, monthly capitalization",
+      "category": "fintech",
+      "calculator": "deposit-calculator",
+      "sourcePath": "/finance/deposit-calculator",
+      "input": {
+        "id": "public-deposit-capitalized",
+        "name": "Public golden case",
+        "amount": 100000,
+        "currency": "RUB",
+        "rate": 12,
+        "months": 12,
+        "termUnit": "months",
+        "startDate": "2025-01-01",
+        "capitalize": true,
+        "interestFrequency": "monthly",
+        "customIntervalValue": 30,
+        "dateShift": "next",
+        "keyRate": 0,
+        "keyRateManual": false,
+        "taxRate": 0,
+        "startCurrencyRate": 1,
+        "endCurrencyRate": 1,
+        "currencyRateManual": false,
+        "minBalance": 0,
+        "earlyCloseEnabled": false,
+        "earlyCloseDate": "",
+        "earlyCloseRate": 0.01,
+        "earlyPayoutHandling": "deduct_from_principal",
+        "eventsEnabled": false,
+        "events": []
+      },
+      "expected": {
+        "finalBalance": 112682.31,
+        "grossFinal": 112682.31,
+        "paidOut": 0,
+        "totalInterest": 12682.31,
+        "totalTaxRub": 0,
+        "netProfit": 12682.31,
+        "contributions": 100000,
+        "withdrawals": 0,
+        "endDate": "2026-01-01",
+        "issueCount": 0
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "ratio": "exact unless stated"
+      },
+      "standards": [
+        "ACT/365 day count where applicable",
+        "Russian Tax Code, Article 214.2"
+      ]
+    },
+    {
+      "id": "deposit-events",
+      "title": "Deposit with quarterly top-ups and one withdrawal",
+      "category": "fintech",
+      "calculator": "deposit-calculator",
+      "sourcePath": "/finance/deposit-calculator",
+      "input": {
+        "id": "public-deposit-events",
+        "name": "Public golden case",
+        "amount": 500000,
+        "currency": "RUB",
+        "rate": 15,
+        "months": 12,
+        "termUnit": "months",
+        "startDate": "2025-01-01",
+        "capitalize": true,
+        "interestFrequency": "monthly",
+        "customIntervalValue": 30,
+        "dateShift": "next",
+        "keyRate": 0,
+        "keyRateManual": false,
+        "taxRate": 0,
+        "startCurrencyRate": 1,
+        "endCurrencyRate": 1,
+        "currencyRateManual": false,
+        "minBalance": 0,
+        "earlyCloseEnabled": false,
+        "earlyCloseDate": "",
+        "earlyCloseRate": 0.01,
+        "earlyPayoutHandling": "deduct_from_principal",
+        "eventsEnabled": true,
+        "events": [
+          {
+            "id": "add-1",
+            "date": "2025-03-01",
+            "type": "add",
+            "amount": 50000,
+            "label": "Top-up",
+            "repeat": "quarterly"
+          },
+          {
+            "id": "withdraw-1",
+            "date": "2025-08-01",
+            "type": "withdraw",
+            "amount": 30000,
+            "label": "Withdrawal",
+            "repeat": "once"
+          }
+        ]
+      },
+      "expected": {
+        "finalBalance": 762855.54,
+        "grossFinal": 762855.54,
+        "paidOut": 0,
+        "totalInterest": 92855.54,
+        "totalTaxRub": 0,
+        "netProfit": 92855.54,
+        "contributions": 700000,
+        "withdrawals": 30000,
+        "endDate": "2026-01-01",
+        "issueCount": 0
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "ratio": "exact unless stated"
+      },
+      "standards": [
+        "ACT/365 day count where applicable",
+        "Russian Tax Code, Article 214.2"
+      ]
+    },
+    {
+      "id": "deposit-taxable",
+      "title": "Deposit with personal income tax estimate",
+      "category": "fintech",
+      "calculator": "deposit-calculator",
+      "sourcePath": "/finance/deposit-calculator",
+      "input": {
+        "id": "public-deposit-taxable",
+        "name": "Public golden case",
+        "amount": 5000000,
+        "currency": "RUB",
+        "rate": 20,
+        "months": 24,
+        "termUnit": "months",
+        "startDate": "2025-01-01",
+        "capitalize": true,
+        "interestFrequency": "monthly",
+        "customIntervalValue": 30,
+        "dateShift": "next",
+        "keyRate": 1,
+        "keyRateManual": false,
+        "taxRate": 13,
+        "startCurrencyRate": 1,
+        "endCurrencyRate": 1,
+        "currencyRateManual": false,
+        "minBalance": 0,
+        "earlyCloseEnabled": false,
+        "earlyCloseDate": "",
+        "earlyCloseRate": 0.01,
+        "earlyPayoutHandling": "deduct_from_principal",
+        "eventsEnabled": false,
+        "events": []
+      },
+      "expected": {
+        "finalBalance": 7068098.07,
+        "grossFinal": 7068098.07,
+        "paidOut": 0,
+        "totalInterest": 2372641.46,
+        "totalTaxRub": 304543.39,
+        "netProfit": 2068098.07,
+        "contributions": 5000000,
+        "withdrawals": 0,
+        "endDate": "2027-01-01",
+        "issueCount": 0
+      },
+      "tolerance": {
+        "moneyRub": 1,
+        "ratio": "exact unless stated"
+      },
+      "standards": [
+        "ACT/365 day count where applicable",
+        "Russian Tax Code, Article 214.2"
+      ],
+      "notes": [
+        "Russian personal income tax estimate for deposit interest."
+      ]
+    }
+  ]
+}

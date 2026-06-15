@@ -1,0 +1,1536 @@
+{
+  "schemaVersion": "2026-06-15",
+  "generatedAt": "2026-06-15T17:08:04.640Z",
+  "project": "Edinici.ru public calculation golden cases",
+  "source": {
+    "site": "https://edinici.ru",
+    "methodology": "https://edinici.ru/methodology#avtotesty",
+    "qaReportGeneratedAt": "2026-06-15T16:47:31.641Z",
+    "formulaParityChecks": 651,
+    "qaSuites": 37
+  },
+  "cases": [
+    {
+      "id": "massa-kilogram-to-gram-1",
+      "title": "Масса: 1 kg to g",
+      "category": "engineering",
+      "calculator": "massa",
+      "sourcePath": "/converter/massa",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "kilogram",
+          "name": "Килограмм",
+          "symbol": "kg",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "gram",
+          "name": "Грамм",
+          "symbol": "g",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "massa-pound-to-kilogram-2",
+      "title": "Масса: 1 lb to kg",
+      "category": "engineering",
+      "calculator": "massa",
+      "sourcePath": "/converter/massa",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "pound",
+          "name": "Фунт",
+          "symbol": "lb",
+          "coefficient": 0.45359237
+        },
+        "toUnit": {
+          "id": "kilogram",
+          "name": "Килограмм",
+          "symbol": "kg",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.45359237
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "massa-troy-ounce-to-gram-3",
+      "title": "Масса: 1 oz t to g",
+      "category": "engineering",
+      "calculator": "massa",
+      "sourcePath": "/converter/massa",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "troy-ounce",
+          "name": "Тройская унция",
+          "symbol": "oz t",
+          "coefficient": 0.0311034768
+        },
+        "toUnit": {
+          "id": "gram",
+          "name": "Грамм",
+          "symbol": "g",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 31.1034768
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "vremya-second-to-millisecond-1",
+      "title": "Время: 1 с to мс",
+      "category": "engineering",
+      "calculator": "vremya",
+      "sourcePath": "/converter/vremya",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "second",
+          "name": "Секунда",
+          "symbol": "с",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "millisecond",
+          "name": "Миллисекунда",
+          "symbol": "мс",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "vremya-millisecond-to-second-2",
+      "title": "Время: 10 мс to с",
+      "category": "engineering",
+      "calculator": "vremya",
+      "sourcePath": "/converter/vremya",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "millisecond",
+          "name": "Миллисекунда",
+          "symbol": "мс",
+          "coefficient": 0.001
+        },
+        "toUnit": {
+          "id": "second",
+          "name": "Секунда",
+          "symbol": "с",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.01
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "davlenie-bar-to-pascal-1",
+      "title": "Давление: 1 bar to Pa",
+      "category": "engineering",
+      "calculator": "davlenie",
+      "sourcePath": "/converter/davlenie",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "bar",
+          "name": "Бар",
+          "symbol": "bar",
+          "coefficient": 100000
+        },
+        "toUnit": {
+          "id": "pascal",
+          "name": "Паскаль",
+          "symbol": "Pa",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 100000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "davlenie-atmosphere-to-pascal-2",
+      "title": "Давление: 1 atm to Pa",
+      "category": "engineering",
+      "calculator": "davlenie",
+      "sourcePath": "/converter/davlenie",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "atmosphere",
+          "name": "Стандартная атмосфера",
+          "symbol": "atm",
+          "coefficient": 101325
+        },
+        "toUnit": {
+          "id": "pascal",
+          "name": "Паскаль",
+          "symbol": "Pa",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 101325
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "davlenie-torr-to-atmosphere-3",
+      "title": "Давление: 760 Torr to atm",
+      "category": "engineering",
+      "calculator": "davlenie",
+      "sourcePath": "/converter/davlenie",
+      "input": {
+        "value": 760,
+        "fromUnit": {
+          "id": "torr",
+          "name": "Торр",
+          "symbol": "Torr",
+          "coefficient": 133.32236842105263
+        },
+        "toUnit": {
+          "id": "atmosphere",
+          "name": "Стандартная атмосфера",
+          "symbol": "atm",
+          "coefficient": 101325
+        }
+      },
+      "expected": {
+        "value": 1
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "dlina-meter-to-centimeter-1",
+      "title": "Длина: 1 m to cm",
+      "category": "engineering",
+      "calculator": "dlina",
+      "sourcePath": "/converter/dlina",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "meter",
+          "name": "Метр",
+          "symbol": "m",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "centimeter",
+          "name": "Сантиметр",
+          "symbol": "cm",
+          "coefficient": 0.01
+        }
+      },
+      "expected": {
+        "value": 100
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "dlina-mile-to-kilometer-2",
+      "title": "Длина: 1 mi to km",
+      "category": "engineering",
+      "calculator": "dlina",
+      "sourcePath": "/converter/dlina",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "mile",
+          "name": "Миля",
+          "symbol": "mi",
+          "coefficient": 1609.344
+        },
+        "toUnit": {
+          "id": "kilometer",
+          "name": "Километр",
+          "symbol": "km",
+          "coefficient": 1000
+        }
+      },
+      "expected": {
+        "value": 1.609344
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "dlina-inch-to-millimeter-3",
+      "title": "Длина: 1 in to mm",
+      "category": "engineering",
+      "calculator": "dlina",
+      "sourcePath": "/converter/dlina",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "inch",
+          "name": "Дюйм",
+          "symbol": "in",
+          "coefficient": 0.0254
+        },
+        "toUnit": {
+          "id": "millimeter",
+          "name": "Миллиметр",
+          "symbol": "mm",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 25.4
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "kompyuternye-edinicy-bit-to-byte-1",
+      "title": "Компьютерные единицы: 1 бит to Б",
+      "category": "engineering",
+      "calculator": "kompyuternye-edinicy",
+      "sourcePath": "/converter/kompyuternye-edinicy",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "bit",
+          "name": "Бит",
+          "symbol": "бит",
+          "coefficient": 0.125
+        },
+        "toUnit": {
+          "id": "byte",
+          "name": "Байт",
+          "symbol": "Б",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.125
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "kompyuternye-edinicy-byte-to-bit-2",
+      "title": "Компьютерные единицы: 10 Б to бит",
+      "category": "engineering",
+      "calculator": "kompyuternye-edinicy",
+      "sourcePath": "/converter/kompyuternye-edinicy",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "byte",
+          "name": "Байт",
+          "symbol": "Б",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "bit",
+          "name": "Бит",
+          "symbol": "бит",
+          "coefficient": 0.125
+        }
+      },
+      "expected": {
+        "value": 80
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "kulinariya-milliliter-to-liter-1",
+      "title": "Кулинария: 1 мл to л",
+      "category": "engineering",
+      "calculator": "kulinariya",
+      "sourcePath": "/converter/kulinariya",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "milliliter",
+          "name": "Миллилитр",
+          "symbol": "мл",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "liter",
+          "name": "Литр",
+          "symbol": "л",
+          "coefficient": 1000
+        }
+      },
+      "expected": {
+        "value": 0.001
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "Culinary volume conventions used by the service"
+      ]
+    },
+    {
+      "id": "kulinariya-liter-to-milliliter-2",
+      "title": "Кулинария: 10 л to мл",
+      "category": "engineering",
+      "calculator": "kulinariya",
+      "sourcePath": "/converter/kulinariya",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "liter",
+          "name": "Литр",
+          "symbol": "л",
+          "coefficient": 1000
+        },
+        "toUnit": {
+          "id": "milliliter",
+          "name": "Миллилитр",
+          "symbol": "мл",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 10000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "Culinary volume conventions used by the service"
+      ]
+    },
+    {
+      "id": "moshchnost-watt-to-milliwatt-1",
+      "title": "Мощность: 1 W to mW",
+      "category": "engineering",
+      "calculator": "moshchnost",
+      "sourcePath": "/converter/moshchnost",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "watt",
+          "name": "Ватт",
+          "symbol": "W",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "milliwatt",
+          "name": "Милливатт",
+          "symbol": "mW",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "moshchnost-milliwatt-to-watt-2",
+      "title": "Мощность: 10 mW to W",
+      "category": "engineering",
+      "calculator": "moshchnost",
+      "sourcePath": "/converter/moshchnost",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "milliwatt",
+          "name": "Милливатт",
+          "symbol": "mW",
+          "coefficient": 0.001
+        },
+        "toUnit": {
+          "id": "watt",
+          "name": "Ватт",
+          "symbol": "W",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.01
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "obyom-liter-to-milliliter-1",
+      "title": "Объём: 1 L to mL",
+      "category": "engineering",
+      "calculator": "obyom",
+      "sourcePath": "/converter/obyom",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "liter",
+          "name": "Литр",
+          "symbol": "L",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "milliliter",
+          "name": "Миллилитр",
+          "symbol": "mL",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "obyom-milliliter-to-liter-2",
+      "title": "Объём: 10 mL to L",
+      "category": "engineering",
+      "calculator": "obyom",
+      "sourcePath": "/converter/obyom",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "milliliter",
+          "name": "Миллилитр",
+          "symbol": "mL",
+          "coefficient": 0.001
+        },
+        "toUnit": {
+          "id": "liter",
+          "name": "Литр",
+          "symbol": "L",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.01
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "osveshchyonnost-lux-to-millilux-1",
+      "title": "Освещённость: 1 лк to млк",
+      "category": "engineering",
+      "calculator": "osveshchyonnost",
+      "sourcePath": "/converter/osveshchyonnost",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "lux",
+          "name": "Люкс",
+          "symbol": "лк",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "millilux",
+          "name": "Миллилюкс",
+          "symbol": "млк",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "osveshchyonnost-millilux-to-lux-2",
+      "title": "Освещённость: 10 млк to лк",
+      "category": "engineering",
+      "calculator": "osveshchyonnost",
+      "sourcePath": "/converter/osveshchyonnost",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "millilux",
+          "name": "Миллилюкс",
+          "symbol": "млк",
+          "coefficient": 0.001
+        },
+        "toUnit": {
+          "id": "lux",
+          "name": "Люкс",
+          "symbol": "лк",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.01
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "plotnost-kilogram-per-cubic-meter-to-gram-per-cubic-centimeter-1",
+      "title": "Плотность: 1 kg/m³ to g/cm³",
+      "category": "engineering",
+      "calculator": "plotnost",
+      "sourcePath": "/converter/plotnost",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "kilogram-per-cubic-meter",
+          "name": "Килограмм на кубический метр",
+          "symbol": "kg/m³",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "gram-per-cubic-centimeter",
+          "name": "Грамм на кубический сантиметр",
+          "symbol": "g/cm³",
+          "coefficient": 1000
+        }
+      },
+      "expected": {
+        "value": 0.001
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "plotnost-gram-per-cubic-centimeter-to-kilogram-per-cubic-meter-2",
+      "title": "Плотность: 1 g/cm³ to kg/m³",
+      "category": "engineering",
+      "calculator": "plotnost",
+      "sourcePath": "/converter/plotnost",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "gram-per-cubic-centimeter",
+          "name": "Грамм на кубический сантиметр",
+          "symbol": "g/cm³",
+          "coefficient": 1000
+        },
+        "toUnit": {
+          "id": "kilogram-per-cubic-meter",
+          "name": "Килограмм на кубический метр",
+          "symbol": "kg/m³",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "ploshchad-square-meter-to-square-centimeter-1",
+      "title": "Площадь: 1 m² to cm²",
+      "category": "engineering",
+      "calculator": "ploshchad",
+      "sourcePath": "/converter/ploshchad",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "square-meter",
+          "name": "Квадратный метр",
+          "symbol": "m²",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "square-centimeter",
+          "name": "Квадратный сантиметр",
+          "symbol": "cm²",
+          "coefficient": 0.0001
+        }
+      },
+      "expected": {
+        "value": 10000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "ploshchad-square-centimeter-to-square-meter-2",
+      "title": "Площадь: 10 cm² to m²",
+      "category": "engineering",
+      "calculator": "ploshchad",
+      "sourcePath": "/converter/ploshchad",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "square-centimeter",
+          "name": "Квадратный сантиметр",
+          "symbol": "cm²",
+          "coefficient": 0.0001
+        },
+        "toUnit": {
+          "id": "square-meter",
+          "name": "Квадратный метр",
+          "symbol": "m²",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.001
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "sila-newton-to-millinewton-1",
+      "title": "Сила: 1 N to mN",
+      "category": "engineering",
+      "calculator": "sila",
+      "sourcePath": "/converter/sila",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "newton",
+          "name": "Ньютон",
+          "symbol": "N",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "millinewton",
+          "name": "Миллиньютон",
+          "symbol": "mN",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "sila-millinewton-to-newton-2",
+      "title": "Сила: 10 mN to N",
+      "category": "engineering",
+      "calculator": "sila",
+      "sourcePath": "/converter/sila",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "millinewton",
+          "name": "Миллиньютон",
+          "symbol": "mN",
+          "coefficient": 0.001
+        },
+        "toUnit": {
+          "id": "newton",
+          "name": "Ньютон",
+          "symbol": "N",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.01
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "skorost-kilometer-per-hour-to-meter-per-second-1",
+      "title": "Скорость: 1 км/ч to м/с",
+      "category": "engineering",
+      "calculator": "skorost",
+      "sourcePath": "/converter/skorost",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "kilometer-per-hour",
+          "name": "Километр в час",
+          "symbol": "км/ч",
+          "coefficient": 0.2777777777777778
+        },
+        "toUnit": {
+          "id": "meter-per-second",
+          "name": "Метр в секунду",
+          "symbol": "м/с",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.277777777778
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "skorost-meter-per-second-to-kilometer-per-hour-2",
+      "title": "Скорость: 10 м/с to км/ч",
+      "category": "engineering",
+      "calculator": "skorost",
+      "sourcePath": "/converter/skorost",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "meter-per-second",
+          "name": "Метр в секунду",
+          "symbol": "м/с",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "kilometer-per-hour",
+          "name": "Километр в час",
+          "symbol": "км/ч",
+          "coefficient": 0.2777777777777778
+        }
+      },
+      "expected": {
+        "value": 36
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "temperatura-celsius-to-kelvin-1",
+      "title": "Температура: 0 °C to K",
+      "category": "engineering",
+      "calculator": "temperatura",
+      "sourcePath": "/converter/temperatura",
+      "input": {
+        "value": 0,
+        "fromUnit": {
+          "id": "celsius",
+          "name": "Градус Цельсия",
+          "symbol": "°C",
+          "coefficient": 1,
+          "offset": 0
+        },
+        "toUnit": {
+          "id": "kelvin",
+          "name": "Кельвин",
+          "symbol": "K",
+          "coefficient": 1,
+          "offset": -273.15
+        }
+      },
+      "expected": {
+        "value": 273.15
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "temperatura-fahrenheit-to-celsius-2",
+      "title": "Температура: 32 °F to °C",
+      "category": "engineering",
+      "calculator": "temperatura",
+      "sourcePath": "/converter/temperatura",
+      "input": {
+        "value": 32,
+        "fromUnit": {
+          "id": "fahrenheit",
+          "name": "Градус Фаренгейта",
+          "symbol": "°F",
+          "coefficient": 0.5555555555555556,
+          "offset": -17.77777777777778
+        },
+        "toUnit": {
+          "id": "celsius",
+          "name": "Градус Цельсия",
+          "symbol": "°C",
+          "coefficient": 1,
+          "offset": 0
+        }
+      },
+      "expected": {
+        "value": 0
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "temperatura-celsius-to-fahrenheit-3",
+      "title": "Температура: 100 °C to °F",
+      "category": "engineering",
+      "calculator": "temperatura",
+      "sourcePath": "/converter/temperatura",
+      "input": {
+        "value": 100,
+        "fromUnit": {
+          "id": "celsius",
+          "name": "Градус Цельсия",
+          "symbol": "°C",
+          "coefficient": 1,
+          "offset": 0
+        },
+        "toUnit": {
+          "id": "fahrenheit",
+          "name": "Градус Фаренгейта",
+          "symbol": "°F",
+          "coefficient": 0.5555555555555556,
+          "offset": -17.77777777777778
+        }
+      },
+      "expected": {
+        "value": 212
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "ugol-degree-to-radian-1",
+      "title": "Угол: 1 ° to rad",
+      "category": "engineering",
+      "calculator": "ugol",
+      "sourcePath": "/converter/ugol",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "degree",
+          "name": "Градус",
+          "symbol": "°",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "radian",
+          "name": "Радиан",
+          "symbol": "rad",
+          "coefficient": 57.29577951308232
+        }
+      },
+      "expected": {
+        "value": 0.01745329252
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "ugol-radian-to-degree-2",
+      "title": "Угол: 10 rad to °",
+      "category": "engineering",
+      "calculator": "ugol",
+      "sourcePath": "/converter/ugol",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "radian",
+          "name": "Радиан",
+          "symbol": "rad",
+          "coefficient": 57.29577951308232
+        },
+        "toUnit": {
+          "id": "degree",
+          "name": "Градус",
+          "symbol": "°",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 572.957795130823
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "uskorenie-meter-per-second-squared-to-centimeter-per-second-squared-1",
+      "title": "Ускорение: 1 м/с² to см/с²",
+      "category": "engineering",
+      "calculator": "uskorenie",
+      "sourcePath": "/converter/uskorenie",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "meter-per-second-squared",
+          "name": "Метр в секунду в квадрате",
+          "symbol": "м/с²",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "centimeter-per-second-squared",
+          "name": "Сантиметр в секунду в квадрате",
+          "symbol": "см/с²",
+          "coefficient": 0.01
+        }
+      },
+      "expected": {
+        "value": 100
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "uskorenie-centimeter-per-second-squared-to-meter-per-second-squared-2",
+      "title": "Ускорение: 10 см/с² to м/с²",
+      "category": "engineering",
+      "calculator": "uskorenie",
+      "sourcePath": "/converter/uskorenie",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "centimeter-per-second-squared",
+          "name": "Сантиметр в секунду в квадрате",
+          "symbol": "см/с²",
+          "coefficient": 0.01
+        },
+        "toUnit": {
+          "id": "meter-per-second-squared",
+          "name": "Метр в секунду в квадрате",
+          "symbol": "м/с²",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.1
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "chastota-hertz-to-millihertz-1",
+      "title": "Частота: 1 Hz to mHz",
+      "category": "engineering",
+      "calculator": "chastota",
+      "sourcePath": "/converter/chastota",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "hertz",
+          "name": "Герц",
+          "symbol": "Hz",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "millihertz",
+          "name": "Миллигерц",
+          "symbol": "mHz",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "chastota-millihertz-to-hertz-2",
+      "title": "Частота: 10 mHz to Hz",
+      "category": "engineering",
+      "calculator": "chastota",
+      "sourcePath": "/converter/chastota",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "millihertz",
+          "name": "Миллигерц",
+          "symbol": "mHz",
+          "coefficient": 0.001
+        },
+        "toUnit": {
+          "id": "hertz",
+          "name": "Герц",
+          "symbol": "Hz",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.01
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "elektricheskij-tok-ampere-to-milliampere-1",
+      "title": "Электрический ток: 1 А to мА",
+      "category": "engineering",
+      "calculator": "elektricheskij-tok",
+      "sourcePath": "/converter/elektricheskij-tok",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "ampere",
+          "name": "Ампер",
+          "symbol": "А",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "milliampere",
+          "name": "Миллиампер",
+          "symbol": "мА",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "elektricheskij-tok-milliampere-to-ampere-2",
+      "title": "Электрический ток: 10 мА to А",
+      "category": "engineering",
+      "calculator": "elektricheskij-tok",
+      "sourcePath": "/converter/elektricheskij-tok",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "milliampere",
+          "name": "Миллиампер",
+          "symbol": "мА",
+          "coefficient": 0.001
+        },
+        "toUnit": {
+          "id": "ampere",
+          "name": "Ампер",
+          "symbol": "А",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.01
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "elektromagnetizm-farad-to-millifarad-1",
+      "title": "Электромагнетизм: 1 Ф to мФ",
+      "category": "engineering",
+      "calculator": "elektromagnetizm",
+      "sourcePath": "/converter/elektromagnetizm",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "farad",
+          "name": "Фарад",
+          "symbol": "Ф",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "millifarad",
+          "name": "Миллифарад",
+          "symbol": "мФ",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "elektromagnetizm-millifarad-to-farad-2",
+      "title": "Электромагнетизм: 10 мФ to Ф",
+      "category": "engineering",
+      "calculator": "elektromagnetizm",
+      "sourcePath": "/converter/elektromagnetizm",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "millifarad",
+          "name": "Миллифарад",
+          "symbol": "мФ",
+          "coefficient": 0.001
+        },
+        "toUnit": {
+          "id": "farad",
+          "name": "Фарад",
+          "symbol": "Ф",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.01
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "energiya-joule-to-millijoule-1",
+      "title": "Энергия: 1 J to mJ",
+      "category": "engineering",
+      "calculator": "energiya",
+      "sourcePath": "/converter/energiya",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "joule",
+          "name": "Джоуль",
+          "symbol": "J",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "millijoule",
+          "name": "Миллиджоуль",
+          "symbol": "mJ",
+          "coefficient": 0.001
+        }
+      },
+      "expected": {
+        "value": 1000
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "energiya-millijoule-to-joule-2",
+      "title": "Энергия: 10 mJ to J",
+      "category": "engineering",
+      "calculator": "energiya",
+      "sourcePath": "/converter/energiya",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "millijoule",
+          "name": "Миллиджоуль",
+          "symbol": "mJ",
+          "coefficient": 0.001
+        },
+        "toUnit": {
+          "id": "joule",
+          "name": "Джоуль",
+          "symbol": "J",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 0.01
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "yarkost-nit-to-candela-per-square-meter-1",
+      "title": "Яркость: 1 нит to cd/m²",
+      "category": "engineering",
+      "calculator": "yarkost",
+      "sourcePath": "/converter/yarkost",
+      "input": {
+        "value": 1,
+        "fromUnit": {
+          "id": "nit",
+          "name": "Нит",
+          "symbol": "нит",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "candela-per-square-meter",
+          "name": "Кандела на квадратный метр",
+          "symbol": "cd/m²",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 1
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    },
+    {
+      "id": "yarkost-candela-per-square-meter-to-nit-2",
+      "title": "Яркость: 10 cd/m² to нит",
+      "category": "engineering",
+      "calculator": "yarkost",
+      "sourcePath": "/converter/yarkost",
+      "input": {
+        "value": 10,
+        "fromUnit": {
+          "id": "candela-per-square-meter",
+          "name": "Кандела на квадратный метр",
+          "symbol": "cd/m²",
+          "coefficient": 1
+        },
+        "toUnit": {
+          "id": "nit",
+          "name": "Нит",
+          "symbol": "нит",
+          "coefficient": 1
+        }
+      },
+      "expected": {
+        "value": 10
+      },
+      "tolerance": {
+        "absolute": 1e-9,
+        "relative": 1e-12
+      },
+      "standards": [
+        "SI units",
+        "GOST 8.417 where applicable"
+      ]
+    }
+  ]
+}
