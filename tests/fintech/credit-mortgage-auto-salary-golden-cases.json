@@ -1,13 +1,13 @@
 {
   "schemaVersion": "2026-06-15",
-  "generatedAt": "2026-06-17T09:19:42.948Z",
+  "generatedAt": "2026-06-17T11:39:41.272Z",
   "project": "Edinici.ru public calculation golden cases",
   "source": {
     "site": "https://edinici.ru",
     "methodology": "https://edinici.ru/methodology#avtotesty",
-    "qaReportGeneratedAt": "2026-06-17T09:19:42.374Z",
-    "formulaParityChecks": 737,
-    "qaSuites": 37
+    "qaReportGeneratedAt": "2026-06-17T11:39:40.652Z",
+    "formulaParityChecks": 839,
+    "qaSuites": 40
   },
   "cases": [
     {

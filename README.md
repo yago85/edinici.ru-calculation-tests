@@ -11,8 +11,8 @@ This repository publishes input-to-expected-output datasets for independent revi
 Current public export:
 
 - Golden cases: 63
-- Internal formula-parity checks referenced by the site: 737
-- Internal QA suites in the latest site report: 37/37
+- Internal formula-parity checks referenced by the site: 839
+- Internal QA suites in the latest site report: 40/40
 - Methodology page: https://edinici.ru/methodology#avtotesty
 
 ### Accuracy model
@@ -38,8 +38,8 @@ Current public export:
 Текущий публичный экспорт:
 
 - Golden cases: 63
-- Внутренних formula-parity проверок, на которые ссылается сайт: 737
-- Наборов QA в последнем отчёте сайта: 37/37
+- Внутренних formula-parity проверок, на которые ссылается сайт: 839
+- Наборов QA в последнем отчёте сайта: 40/40
 - Страница методологии: https://edinici.ru/methodology#avtotesty
 
 ### Архитектура точности
