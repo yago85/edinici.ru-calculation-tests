@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-15",
-  "generatedAt": "2026-06-30T14:54:28.941Z",
+  "generatedAt": "2026-06-30T16:29:34.784Z",
   "repository": "https://github.com/yago85/edinici.ru-calculation-tests",
   "site": "https://edinici.ru",
   "methodology": "https://edinici.ru/methodology#avtotesty",
@@ -11,9 +11,9 @@
     "health": 4
   },
   "internalQaReport": {
-    "generatedAt": "2026-06-30T14:54:28.386Z",
+    "generatedAt": "2026-06-30T16:29:34.178Z",
     "allPassed": true,
-    "suites": "49/49",
+    "suites": "50/50",
     "skippedSuites": [
       "test:transport-tax:data",
       "test:transport-tax:integrity",
@@ -22,6 +22,6 @@
       "test:ops-alerts"
     ],
     "formulaParityChecks": 1084,
-    "totalReportedChecks": 8743
+    "totalReportedChecks": 8749
   }
 }
