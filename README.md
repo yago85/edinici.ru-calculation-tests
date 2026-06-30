@@ -12,7 +12,7 @@ Current public export:
 
 - Golden cases: 63
 - Internal formula-parity checks referenced by the site: 1084
-- Internal QA suites in the latest site report: 48/48
+- Internal QA suites in the latest site report: 49/49
 - Internal suites skipped in this public export environment: test:transport-tax:data, test:transport-tax:integrity
 - Methodology page: https://edinici.ru/methodology#avtotesty
 
@@ -40,7 +40,7 @@ Current public export:
 
 - Golden cases: 63
 - Внутренних formula-parity проверок, на которые ссылается сайт: 1084
-- Наборов QA в последнем отчёте сайта: 48/48
+- Наборов QA в последнем отчёте сайта: 49/49
 - Внутренние наборы, пропущенные в окружении public export: test:transport-tax:data, test:transport-tax:integrity
 - Страница методологии: https://edinici.ru/methodology#avtotesty
 
