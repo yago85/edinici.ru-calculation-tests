@@ -13,8 +13,8 @@ Current public export:
 - Golden cases: 63
 - Internal formula-parity checks referenced by the site: 1452
 - Calculation checks in the latest site report: 12331
-- Calculation QA suites in the latest site report: 71/71
-- Internal-only suites not included in this public export: 16
+- Calculation QA suites in the latest site report: 72/72
+- Internal-only suites not included in this public export: 19
 - Methodology page: https://edinici.ru/methodology#avtotesty
 
 ### Accuracy model
@@ -42,8 +42,8 @@ Current public export:
 - Golden cases: 63
 - Внутренних formula-parity проверок, на которые ссылается сайт: 1452
 - Проверок расчётов в последнем отчёте сайта: 12331
-- Наборов проверок расчётов в последнем отчёте сайта: 71/71
-- Внутренних наборов, не входящих в public export: 16
+- Наборов проверок расчётов в последнем отчёте сайта: 72/72
+- Внутренних наборов, не входящих в public export: 19
 - Страница методологии: https://edinici.ru/methodology#avtotesty
 
 ### Архитектура точности
