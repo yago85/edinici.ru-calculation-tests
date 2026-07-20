@@ -52,6 +52,12 @@ Current public export:
 2. Привязка к источникам. Финансовые кейсы учитывают применимые правила налоговых и банковских расчётов РФ. Инженерные кейсы используют коэффициенты СИ и ГОСТ 8.417 там, где это применимо. Health-кейсы опираются на диапазоны ИМТ ВОЗ и опубликованные уравнения Jackson-Pollock/Siri.
 3. Privacy-first архитектура продукта. Калькуляторы Edinici.ru спроектированы так, чтобы пользовательские параметры расчёта обрабатывались локально в браузере там, где это допускает инструмент. Этот репозиторий проверяет числовые результаты, а не телеметрию пользователей.
 
+## Report a discrepancy / Сообщить о расхождении
+
+If a calculator result disagrees with the published methodology or these golden cases, open an issue: https://github.com/yago85/edinici.ru-calculation-tests/issues/new/choose. Include the calculator link, the inputs, the expected result with its basis and the actual result.
+
+Если результат калькулятора расходится с опубликованной методикой или golden-кейсами, откройте issue по ссылке выше. Приложите ссылку на калькулятор, входные данные, ожидаемый результат с обоснованием и фактический результат. Подтверждённые расхождения исправляются в расчётном движке и фиксируются новым golden-кейсом.
+
 ## Verification
 
 Run the lightweight repository check:

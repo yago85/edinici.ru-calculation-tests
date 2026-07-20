@@ -1,0 +1,45 @@
+name: Calculation discrepancy / Расхождение в расчёте
+description: Report a numeric discrepancy in an Edinici.ru calculator / Сообщить о числовом расхождении в калькуляторе Edinici.ru
+title: "[calc] "
+labels: ["calculation-discrepancy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что помогаете делать расчёты точнее. Чем полнее данные, тем быстрее расхождение будет воспроизведено и разобрано.
+        Thank you for helping keep the calculations accurate. The more complete the details, the faster the discrepancy can be reproduced.
+  - type: input
+    id: calculator-url
+    attributes:
+      label: Calculator URL / Ссылка на калькулятор
+      description: Лучше всего - ссылка «Поделиться» с вашими параметрами / Ideally a shared link that already contains your inputs.
+      placeholder: https://edinici.ru/finance/deposit-calculator
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs / Входные данные
+      description: Все параметры расчёта / All calculation parameters.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result and basis / Ожидаемый результат и обоснование
+      description: Какой результат вы ожидаете и на каком основании (норма закона, формула, документ банка) / What you expected and the basis (law, formula, bank document).
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result / Фактический результат
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else / Дополнительно
+      description: Дата расчёта, строка «Правила расчёта» из PDF-отчёта, скриншоты / Calculation date, the "Правила расчёта" line from the PDF report, screenshots.
+    validations:
+      required: false
