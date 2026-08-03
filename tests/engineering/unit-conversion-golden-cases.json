@@ -1,14 +1,12 @@
 {
-  "schemaVersion": "2026-06-15",
-  "generatedAt": "2026-07-22T16:23:06.787Z",
+  "schemaVersion": "2026-07-28",
+  "generatedAt": "2026-08-03T06:10:20.598Z",
   "project": "Edinici.ru public calculation golden cases",
   "source": {
     "site": "https://edinici.ru",
     "methodology": "https://edinici.ru/methodology#avtotesty",
-    "qaReportGeneratedAt": "2026-07-22T15:56:04.657Z",
-    "formulaParityChecks": 1452,
-    "qaSuites": 68,
-    "skippedSuiteCount": 43
+    "commitSha": "034e2e281ef6e43fb11e7335ad4d893920ede3b4",
+    "workingTree": "clean"
   },
   "cases": [
     {
@@ -42,7 +40,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "massa-pound-to-kilogram-2",
@@ -75,7 +81,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "massa-troy-ounce-to-gram-3",
@@ -108,7 +122,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "vremya-second-to-millisecond-1",
@@ -141,7 +163,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "vremya-millisecond-to-second-2",
@@ -174,7 +204,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "davlenie-bar-to-pascal-1",
@@ -207,7 +245,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "davlenie-atmosphere-to-pascal-2",
@@ -240,7 +286,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "davlenie-torr-to-atmosphere-3",
@@ -273,7 +327,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "dlina-meter-to-centimeter-1",
@@ -306,7 +368,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "dlina-mile-to-kilometer-2",
@@ -339,7 +409,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "dlina-inch-to-millimeter-3",
@@ -372,7 +450,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "kompyuternye-edinicy-bit-to-byte-1",
@@ -405,7 +491,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "kompyuternye-edinicy-byte-to-bit-2",
@@ -438,7 +532,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "kulinariya-milliliter-to-liter-1",
@@ -470,7 +572,15 @@
       },
       "standards": [
         "Culinary volume conventions used by the service"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "kulinariya-liter-to-milliliter-2",
@@ -502,7 +612,15 @@
       },
       "standards": [
         "Culinary volume conventions used by the service"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "moshchnost-watt-to-milliwatt-1",
@@ -535,7 +653,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "moshchnost-milliwatt-to-watt-2",
@@ -568,7 +694,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "obyom-liter-to-milliliter-1",
@@ -601,7 +735,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "obyom-milliliter-to-liter-2",
@@ -634,7 +776,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "osveshchyonnost-lux-to-millilux-1",
@@ -667,7 +817,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "osveshchyonnost-millilux-to-lux-2",
@@ -700,7 +858,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "plotnost-kilogram-per-cubic-meter-to-gram-per-cubic-centimeter-1",
@@ -733,7 +899,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "plotnost-gram-per-cubic-centimeter-to-kilogram-per-cubic-meter-2",
@@ -766,7 +940,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "ploshchad-square-meter-to-square-centimeter-1",
@@ -799,7 +981,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "ploshchad-square-centimeter-to-square-meter-2",
@@ -832,7 +1022,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "sila-newton-to-millinewton-1",
@@ -865,7 +1063,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "sila-millinewton-to-newton-2",
@@ -898,7 +1104,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "skorost-kilometer-per-hour-to-meter-per-second-1",
@@ -931,7 +1145,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "skorost-meter-per-second-to-kilometer-per-hour-2",
@@ -964,7 +1186,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "temperatura-celsius-to-kelvin-1",
@@ -999,7 +1229,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "temperatura-fahrenheit-to-celsius-2",
@@ -1034,7 +1272,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "temperatura-celsius-to-fahrenheit-3",
@@ -1069,7 +1315,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "ugol-degree-to-radian-1",
@@ -1102,7 +1356,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "ugol-radian-to-degree-2",
@@ -1135,7 +1397,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "uskorenie-meter-per-second-squared-to-centimeter-per-second-squared-1",
@@ -1168,7 +1438,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "uskorenie-centimeter-per-second-squared-to-meter-per-second-squared-2",
@@ -1201,7 +1479,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "chastota-hertz-to-millihertz-1",
@@ -1234,7 +1520,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "chastota-millihertz-to-hertz-2",
@@ -1267,7 +1561,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "elektricheskij-tok-ampere-to-milliampere-1",
@@ -1300,7 +1602,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "elektricheskij-tok-milliampere-to-ampere-2",
@@ -1333,7 +1643,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "elektromagnetizm-farad-to-millifarad-1",
@@ -1366,7 +1684,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "elektromagnetizm-millifarad-to-farad-2",
@@ -1399,7 +1725,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "energiya-joule-to-millijoule-1",
@@ -1432,7 +1766,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "energiya-millijoule-to-joule-2",
@@ -1465,7 +1807,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "yarkost-nit-to-candela-per-square-meter-1",
@@ -1498,7 +1848,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "yarkost-candela-per-square-meter-to-nit-2",
@@ -1531,7 +1889,15 @@
       "standards": [
         "SI units",
         "GOST 8.417 where applicable"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     }
   ]
 }

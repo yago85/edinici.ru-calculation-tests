@@ -1,23 +1,21 @@
 {
-  "schemaVersion": "2026-06-15",
-  "generatedAt": "2026-07-22T16:23:06.784Z",
+  "schemaVersion": "2026-07-28",
+  "generatedAt": "2026-08-03T06:10:20.593Z",
   "repository": "https://github.com/yago85/edinici.ru-calculation-tests",
   "site": "https://edinici.ru",
   "methodology": "https://edinici.ru/methodology#avtotesty",
-  "publicGoldenCases": 63,
+  "sourceRevision": {
+    "commitSha": "034e2e281ef6e43fb11e7335ad4d893920ede3b4",
+    "workingTree": "clean"
+  },
+  "publicGoldenCases": 66,
   "categories": {
     "fintech": 13,
     "engineering": 46,
-    "health": 4
+    "health": 7
   },
-  "internalQaReport": {
-    "generatedAt": "2026-07-22T15:56:04.657Z",
-    "allPassed": true,
-    "suites": "68/68",
-    "skippedSuiteCount": 43,
-    "formulaParityChecks": 1452,
-    "calculationChecks": 12331,
-    "calculationSuiteCount": 68,
-    "calculationPassedSuites": 68
+  "releaseEvidence": {
+    "status": "passed",
+    "verifiedAt": "2026-08-02T10:54:21.391Z"
   }
 }

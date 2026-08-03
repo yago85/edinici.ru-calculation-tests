@@ -6,51 +6,53 @@
 
 ### What is published here
 
-This repository publishes input-to-expected-output datasets for independent review. The datasets are exported from the same codebase that powers Edinici.ru, but they do not include the private calculation engines, Excel builders or internal implementation details.
+This repository publishes input-to-expected-output datasets for external inspection. The datasets are exported from the same codebase that powers Edinici.ru, but they do not include the private calculation engines, Excel builders or internal implementation details.
+
+Each case has an `oracle` object. The current production-engine outputs are marked `engine_regression` and `independentFromRuntime: false`: they detect later regressions but do not independently prove that the formula is correct. A stronger label is allowed only with reproducible provenance.
 
 Current public export:
 
-- Golden cases: 63
-- Internal formula-parity checks referenced by the site: 1452
-- Calculation checks in the latest site report: 12331
-- Calculation QA suites in the latest site report: 68/68
-- Internal-only suites not included in this public export: 43
+- Golden cases: 66
+- Source commit: 034e2e281ef6e43fb11e7335ad4d893920ede3b4 (clean working tree at export)
+- Source release verification: passed at 2026-08-02T10:54:21.391Z
 - Methodology page: https://edinici.ru/methodology#avtotesty
 
 ### Accuracy model
 
-1. Isolated datasets. Financial, engineering and health calculators are represented by deterministic inputs and expected results.
-2. Source-driven calculations. Financial cases reference Russian tax and banking rules where applicable. Engineering cases use SI conversion factors and GOST 8.417 where applicable. Health cases reference WHO BMI ranges and published Jackson-Pollock/Siri equations.
-3. Privacy-first product architecture. Edinici.ru calculators are designed so user-entered calculation parameters are processed locally in the browser where the tool permits it. This repository validates numerical outputs, not user telemetry.
+1. Explicit provenance. Every expected result states whether it came from the production engine, a manual normative derivation, an official example or an independent implementation.
+2. Isolated datasets. Financial, engineering and health calculators are represented by deterministic inputs and expected results.
+3. Source-linked context. Standards explain the method but do not automatically make an engine-generated expected value independent.
+4. Privacy-first product architecture. Edinici.ru calculators are designed so user-entered calculation parameters are processed locally in the browser where the tool permits it. This repository validates numerical outputs, not user telemetry.
 
 ### Repository structure
 
 - `tests/fintech/` - deposits, loans, mortgages, auto credit and salary golden cases.
 - `tests/engineering/` - unit conversion golden cases.
-- `tests/health/` - BMI and body-fat estimate golden cases.
-- `tests/summary.json` - export summary and QA counters.
+- `tests/health/` - BMI, body-fat, calorie, water and pregnancy calculator golden cases.
+- `tests/summary.json` - export summary, source revision and publication status.
 - `scripts/validate-golden-cases.mjs` - dependency-free schema sanity check.
 
 ## Русский
 
 ### Что опубликовано
 
-В репозитории опубликованы пары входных данных и эталонных результатов для внешней проверки точности. Данные экспортируются из той же кодовой базы, которая используется на Edinici.ru, но без публикации приватных вычислительных движков, Excel-сборщиков и внутренних деталей реализации.
+В репозитории опубликованы пары входных данных и ожидаемых результатов для внешнего разбора. Данные экспортируются из той же кодовой базы, которая используется на Edinici.ru, но без публикации приватных вычислительных движков, Excel-сборщиков и внутренних деталей реализации.
+
+У каждого кейса есть объект `oracle`. Результаты текущего production-движка обозначены как `engine_regression` и `independentFromRuntime: false`: они обнаруживают последующие регрессии, но не являются независимым доказательством правильности формулы. Более сильный уровень допускается только с воспроизводимым provenance.
 
 Текущий публичный экспорт:
 
-- Golden cases: 63
-- Внутренних formula-parity проверок, на которые ссылается сайт: 1452
-- Проверок расчётов в последнем отчёте сайта: 12331
-- Наборов проверок расчётов в последнем отчёте сайта: 68/68
-- Внутренних наборов, не входящих в public export: 43
+- Golden cases: 66
+- Commit исходного проекта: 034e2e281ef6e43fb11e7335ad4d893920ede3b4 (рабочее дерево при экспорте: clean)
+- Проверка исходной версии перед экспортом: пройдена, 2026-08-02T10:54:21.391Z
 - Страница методологии: https://edinici.ru/methodology#avtotesty
 
 ### Архитектура точности
 
-1. Изолированные датасеты. Для финансовых, инженерных и health-калькуляторов фиксируются входные параметры и ожидаемые результаты.
-2. Привязка к источникам. Финансовые кейсы учитывают применимые правила налоговых и банковских расчётов РФ. Инженерные кейсы используют коэффициенты СИ и ГОСТ 8.417 там, где это применимо. Health-кейсы опираются на диапазоны ИМТ ВОЗ и опубликованные уравнения Jackson-Pollock/Siri.
-3. Privacy-first архитектура продукта. Калькуляторы Edinici.ru спроектированы так, чтобы пользовательские параметры расчёта обрабатывались локально в браузере там, где это допускает инструмент. Этот репозиторий проверяет числовые результаты, а не телеметрию пользователей.
+1. Явное происхождение. Для каждого expected указано, получен ли он production-движком, ручным нормативным выводом, официальным примером или независимой реализацией.
+2. Изолированные датасеты. Для финансовых, инженерных и health-калькуляторов фиксируются входные параметры и ожидаемые результаты.
+3. Контекст источников. Ссылка на норму объясняет метод, но сама по себе не делает ожидаемое значение, созданное движком, независимым.
+4. Privacy-first архитектура продукта. Калькуляторы Edinici.ru спроектированы так, чтобы пользовательские параметры расчёта обрабатывались локально в браузере там, где это допускает инструмент. Этот репозиторий проверяет числовые результаты, а не телеметрию пользователей.
 
 ## Report a discrepancy / Сообщить о расхождении
 

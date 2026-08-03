@@ -1,14 +1,12 @@
 {
-  "schemaVersion": "2026-06-15",
-  "generatedAt": "2026-07-22T16:23:06.787Z",
+  "schemaVersion": "2026-07-28",
+  "generatedAt": "2026-08-03T06:10:20.599Z",
   "project": "Edinici.ru public calculation golden cases",
   "source": {
     "site": "https://edinici.ru",
     "methodology": "https://edinici.ru/methodology#avtotesty",
-    "qaReportGeneratedAt": "2026-07-22T15:56:04.657Z",
-    "formulaParityChecks": 1452,
-    "qaSuites": 68,
-    "skippedSuiteCount": 43
+    "commitSha": "034e2e281ef6e43fb11e7335ad4d893920ede3b4",
+    "workingTree": "clean"
   },
   "cases": [
     {
@@ -39,7 +37,15 @@
       ],
       "notes": [
         "Informational adult screening calculation, not a diagnosis."
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "bmi-obesity-class-one",
@@ -69,7 +75,15 @@
       ],
       "notes": [
         "Informational adult screening calculation, not a diagnosis."
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "body-fat-jp3-male",
@@ -110,7 +124,15 @@
       ],
       "notes": [
         "Informational body composition estimate, not a medical diagnosis."
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "body-fat-jp7-female",
@@ -151,7 +173,128 @@
       ],
       "notes": [
         "Informational body composition estimate, not a medical diagnosis."
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
+    },
+    {
+      "id": "calorie-mifflin-maintenance-adult",
+      "title": "Adult calorie estimate, Mifflin-St Jeor maintenance scenario",
+      "category": "health",
+      "calculator": "calorie-calculator",
+      "sourcePath": "/health/calorie-calculator",
+      "input": {
+        "sex": "male",
+        "weight": "80",
+        "height": "180",
+        "age": "35",
+        "activity": "1.55",
+        "goal": "maintain",
+        "formula": "mifflin",
+        "diet": "balanced"
+      },
+      "expected": {
+        "bmrKcal": 1755,
+        "tdeeKcal": 2720,
+        "scenarioKcal": 2720
+      },
+      "tolerance": {
+        "kilocalories": 1
+      },
+      "standards": [
+        "Mifflin-St Jeor resting energy expenditure equation"
+      ],
+      "notes": [
+        "Population equation for adults and an arithmetic scenario, not an individual nutrition prescription."
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
+    },
+    {
+      "id": "water-efsa-pregnancy-adjustment",
+      "title": "EFSA total-water reference with explicit adjustment",
+      "category": "health",
+      "calculator": "water-calculator",
+      "sourcePath": "/health/water-calculator",
+      "input": {
+        "sex": "female",
+        "pregnant": "pregnant",
+        "additionalMl": "300"
+      },
+      "expected": {
+        "totalLitres": 2.6,
+        "referenceLitres": 2.3,
+        "adjustmentMl": 300
+      },
+      "tolerance": {
+        "litres": 0.01,
+        "millilitres": 1
+      },
+      "standards": [
+        "EFSA dietary reference values for total water"
+      ],
+      "notes": [
+        "Total water includes beverages and food moisture; the adjustment is user-provided."
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
+    },
+    {
+      "id": "pregnancy-lmp-fixed-as-of-date",
+      "title": "Pregnancy calendar from LMP with a fixed as-of date",
+      "category": "health",
+      "calculator": "pregnancy-calculator",
+      "sourcePath": "/health/pregnancy-calculator",
+      "input": {
+        "method": "lmp",
+        "date": "2026-07-01",
+        "cycle": "28",
+        "usWeeks": "8",
+        "usDays": "3",
+        "asOfDate": "2026-07-15"
+      },
+      "expected": {
+        "dueDate": "7 апреля 2027",
+        "gestationalAge": "2 нед. 0 дн.",
+        "trimester": "I",
+        "daysRemaining": 266
+      },
+      "tolerance": {
+        "calendarDates": "exact",
+        "days": 0
+      },
+      "standards": [
+        "ACOG Methods for Estimating the Due Date"
+      ],
+      "notes": [
+        "Calendar estimate only; the as-of date is explicit for reproducibility."
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     }
   ]
 }

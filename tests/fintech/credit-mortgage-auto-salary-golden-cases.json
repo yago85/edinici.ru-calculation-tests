@@ -1,14 +1,12 @@
 {
-  "schemaVersion": "2026-06-15",
-  "generatedAt": "2026-07-22T16:23:06.786Z",
+  "schemaVersion": "2026-07-28",
+  "generatedAt": "2026-08-03T06:10:20.598Z",
   "project": "Edinici.ru public calculation golden cases",
   "source": {
     "site": "https://edinici.ru",
     "methodology": "https://edinici.ru/methodology#avtotesty",
-    "qaReportGeneratedAt": "2026-07-22T15:56:04.657Z",
-    "formulaParityChecks": 1452,
-    "qaSuites": 68,
-    "skippedSuiteCount": 43
+    "commitSha": "034e2e281ef6e43fb11e7335ad4d893920ede3b4",
+    "workingTree": "clean"
   },
   "cases": [
     {
@@ -58,7 +56,15 @@
       },
       "standards": [
         "Standard annuity and differentiated loan formulas"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "credit-differentiated-with-prepayment",
@@ -116,7 +122,15 @@
       },
       "standards": [
         "Standard annuity and differentiated loan formulas"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "mortgage-free-market-with-insurance",
@@ -160,7 +174,8 @@
         "lifeInsuranceRate": "0.5",
         "lifeInsuranceDiscount": "0.7",
         "monthlyIncome": "260000",
-        "monthlyRent": "45000"
+        "monthlyRent": "45000",
+        "inflationRate": "4"
       },
       "expected": {
         "propertyPrice": 8000000,
@@ -179,7 +194,15 @@
       "standards": [
         "Russian mortgage program limits",
         "Russian Tax Code, Article 220"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "mortgage-family-program",
@@ -223,7 +246,8 @@
         "lifeInsuranceRate": "0.5",
         "lifeInsuranceDiscount": "0.7",
         "monthlyIncome": "220000",
-        "monthlyRent": "45000"
+        "monthlyRent": "45000",
+        "inflationRate": "4"
       },
       "expected": {
         "propertyPrice": 9000000,
@@ -242,7 +266,15 @@
       "standards": [
         "Russian mortgage program limits",
         "Russian Tax Code, Article 220"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "auto-credit-new-car",
@@ -274,7 +306,7 @@
         "actualDayInterest": false,
         "rateChanges": [],
         "prepayments": [],
-        "program": "standard",
+        "program": "free",
         "autoStatus": "new",
         "sellerType": "dealer",
         "stateSupportRegion": "standard",
@@ -311,7 +343,15 @@
       },
       "standards": [
         "Russian auto credit program constraints"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "auto-credit-used-car-trade-in",
@@ -343,7 +383,7 @@
         "actualDayInterest": false,
         "rateChanges": [],
         "prepayments": [],
-        "program": "standard",
+        "program": "free",
         "autoStatus": "used",
         "sellerType": "dealer",
         "stateSupportRegion": "standard",
@@ -380,7 +420,15 @@
       },
       "standards": [
         "Russian auto credit program constraints"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "salary-tk-standard",
@@ -503,7 +551,15 @@
       "standards": [
         "Russian Tax Code, Article 224",
         "Russian Tax Code, Chapter 34"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "salary-npd-company-client",
@@ -626,7 +682,15 @@
       "standards": [
         "Russian Tax Code, Article 224",
         "Russian Tax Code, Chapter 34"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     },
     {
       "id": "salary-ip-usn",
@@ -749,7 +813,15 @@
       "standards": [
         "Russian Tax Code, Article 224",
         "Russian Tax Code, Chapter 34"
-      ]
+      ],
+      "oracle": {
+        "type": "engine_regression",
+        "description": "Ожидаемый результат сформирован текущим production-движком Edinici.ru. Кейс выявляет последующие регрессии, но не является независимым доказательством правильности формулы.",
+        "independentFromRuntime": false,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "2026-07-28",
+        "calculatorVersion": "source-commit"
+      }
     }
   ]
 }
