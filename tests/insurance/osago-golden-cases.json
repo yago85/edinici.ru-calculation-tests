@@ -1,0 +1,2945 @@
+{
+  "schemaVersion": "2026-07-28",
+  "generatedAt": "2026-09-08T19:03:41.122Z",
+  "project": "Edinici.ru public calculation golden cases",
+  "source": {
+    "site": "https://edinici.ru",
+    "methodology": "https://edinici.ru/methodology#avtotesty",
+    "commitSha": "44158fca803e4e0ccb921edd557979b7dba54862",
+    "workingTree": "clean"
+  },
+  "cases": [
+    {
+      "id": "osago-car-individual-moscow",
+      "title": "Легковой автомобиль физического лица в Москве, ограниченный договор, один водитель",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "2282.395752",
+        "premiumMaxExact": "14136.49692",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 2.2; приложение 2 пункты 1, 2, 3.1, 4, 5.1, 6.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-car-sole-proprietor",
+      "title": "Индивидуальный предприниматель приравнен к физическому лицу в строке ТБ",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "SOLE_PROPRIETOR"
+          ],
+          "tariffOwnerType": "SOLE_PROPRIETOR",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "2282.395752",
+        "premiumMaxExact": "14136.49692",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 2.2.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-car-legal-restricted",
+      "title": "Собственник - юридическое лицо: КБМ юридического лица и КВС, увеличенный в 1,8 раза",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "LEGAL"
+          ],
+          "tariffOwnerType": "LEGAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": {
+            "source": "USER_PROVIDED",
+            "value": "0.74"
+          }
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "1895.5617408",
+        "premiumMaxExact": "17227.619136",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-1",
+            "value": null,
+            "min": "724",
+            "max": "6580"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-8",
+            "value": "0.74",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "1.638",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 2.1; приложение 2 подпункт 5.3; приложение 4 пункт 9.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-car-legal-unrestricted",
+      "title": "Юридическое лицо без ограничения круга водителей: КО 1,97 и КВС не применяется",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "LEGAL"
+          ],
+          "tariffOwnerType": "LEGAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": {
+            "source": "USER_PROVIDED",
+            "value": "0.74"
+          }
+        },
+        "access": {
+          "kind": "UNRESTRICTED"
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "2279.765952",
+        "premiumMaxExact": "20719.41984",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-1",
+            "value": null,
+            "min": "724",
+            "max": "6580"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-8",
+            "value": "0.74",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": null,
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-1",
+            "value": "1.97",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 2 пункт 4; приложение 4 пункты 9, 10.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-car-individual-unrestricted",
+      "title": "Физическое лицо без ограничения круга водителей: КБМ третьего класса и КО 3,16",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "UNRESTRICTED"
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "11172.346848",
+        "premiumMaxExact": "69198.27408",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-5",
+            "value": "1.17",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": null,
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-1",
+            "value": "3.16",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 2 пункт 4; приложение 4 пункт 8.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-car-taxi",
+      "title": "Легковой автомобиль, используемый в качестве такси",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": true,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "2067.044616",
+        "premiumMaxExact": "29560.206312",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-3",
+            "value": null,
+            "min": "1267",
+            "max": "18119"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 2.3.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-moto",
+      "title": "Мотоцикл категории «A»: своя строка ТБ, своя таблица КМ и КВС",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "MOTO",
+          "power": {
+            "value": "40",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "194.5188",
+        "premiumMaxExact": "5346.1296",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-1",
+            "value": null,
+            "min": "155",
+            "max": "4260"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-2-6-10",
+            "value": "0.84",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-moto-1",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 1; приложение 2 подпункты 3.2 и 5.2.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-truck-upto-16",
+      "title": "Грузовой автомобиль до 16 тонн: формула без КМ",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "TRUCK",
+          "power": null,
+          "mass": "UPTO_16T",
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITHOUT_KM",
+        "premiumMinExact": "1075.39614",
+        "premiumMaxExact": "18637.93386",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-3-1",
+            "value": null,
+            "min": "791",
+            "max": "13709"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 3.1; приложение 4 пункт 14 строка 2.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-truck-over-16",
+      "title": "Грузовой автомобиль более 16 тонн",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "TRUCK",
+          "power": null,
+          "mass": "OVER_16T",
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITHOUT_KM",
+        "premiumMinExact": "2024.35506",
+        "premiumMaxExact": "23385.44754",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-3-2",
+            "value": null,
+            "min": "1489",
+            "max": "17201"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 3.2.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-bus-d1",
+      "title": "Автобус подкатегории «D1»",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "BUS",
+          "power": null,
+          "mass": null,
+          "busSubtype": "D1_FAMILY",
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITHOUT_KM",
+        "premiumMinExact": "1277.9676",
+        "premiumMaxExact": "10666.95084",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-4-1",
+            "value": null,
+            "min": "940",
+            "max": "7846"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 4.1.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-bus-regular-routes",
+      "title": "Автобус на регулярных перевозках: отдельная строка ТБ",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "BUS",
+          "power": null,
+          "mass": null,
+          "busSubtype": "D_FAMILY",
+          "regularRoutes": true,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITHOUT_KM",
+        "premiumMinExact": "3120.1443",
+        "premiumMaxExact": "15950.12328",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-4-3",
+            "value": null,
+            "min": "2295",
+            "max": "11732"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 4.3.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-self-propelled",
+      "title": "Трактор: строка 7 приложения 1 и отдельная графа таблицы КТ",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "SELF_PROPELLED",
+          "power": null,
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITHOUT_KM",
+        "premiumMinExact": "335.564684",
+        "premiumMaxExact": "3222.472344",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-7",
+            "value": null,
+            "min": "383",
+            "max": "3678"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.16",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 1 строка 7; приложение 2 пункт 1 графа 4.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-two-drivers-independent-maxima",
+      "title": "Максимальный КБМ и максимальный КВС принадлежат разным водителям",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "2.25"
+              }
+            },
+            {
+              "id": "driver-2",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.46"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "11694.5208",
+        "premiumMaxExact": "72432.468",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-1",
+            "value": "2.25",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-2-4",
+            "value": "1.72",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 4 пункты 6 и 11.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-no-history-declared",
+      "title": "Водитель без страховой истории: третий класс КБМ",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "NO_HISTORY_DECLARED"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "3217.353048",
+        "premiumMaxExact": "19927.35108",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-3",
+            "value": "1.17",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 4 пункт 7.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-seasonal-three-months",
+      "title": "Сезонное использование три месяца: КС 0,5",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_3"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "1141.197876",
+        "premiumMaxExact": "7068.24846",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-1",
+            "value": "0.5",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 2 пункт 6 строка 1.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-transit-20-days",
+      "title": "Следование к месту регистрации: формула без КТ и КС, КП 0,2",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "TO_REGISTRATION",
+          "contractDays": 20
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "TRANSIT_WITH_KM",
+        "premiumMinExact": "253.599528",
+        "premiumMaxExact": "1570.72188",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KP",
+            "rowId": "kp-transit",
+            "value": "0.2",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 2 пункт 7 абзац последний; приложение 4 пункт 14 строка 3.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-foreign-2025-not-listed",
+      "title": "Иностранное ТС из государства вне Перечня, редакция подпункта 1.1",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2025-12-31",
+        "scenario": {
+          "kind": "FOREIGN_TEMPORARY",
+          "periodCode": "MONTHS_3"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "FOREIGN",
+            "groupId": "kt-foreign-1-1-4"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": null,
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2025-12-09",
+        "formulaCode": "SHORT_OR_FOREIGN_WITH_KM",
+        "premiumMinExact": "1101.485862",
+        "premiumMaxExact": "6822.28377",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-foreign-1-1-4",
+            "value": "1.7",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-5-10",
+            "value": "0.93",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KP",
+            "rowId": "kp-4",
+            "value": "0.5",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 2 подпункт 1.1 строка 4.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-foreign-2026-not-listed",
+      "title": "То же ТС с 01.01.2026: действует подпункт 1.2 с другой нумерацией строк",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-01-01",
+        "scenario": {
+          "kind": "FOREIGN_TEMPORARY",
+          "periodCode": "MONTHS_3"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "FOREIGN",
+            "groupId": "kt-foreign-1-2-3"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": null,
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-01-01",
+        "formulaCode": "SHORT_OR_FOREIGN_WITH_KM",
+        "premiumMinExact": "1101.485862",
+        "premiumMaxExact": "6822.28377",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-foreign-1-2-3",
+            "value": "1.7",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-5-10",
+            "value": "0.93",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KP",
+            "rowId": "kp-4",
+            "value": "0.5",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 2 подпункт 1.2 строка 3.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-foreign-unfriendly-30",
+      "title": "Иностранное ТС из государства Перечня: КТ 30",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "FOREIGN_TEMPORARY",
+          "periodCode": "DAYS_5_TO_15"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "FOREIGN",
+            "groupId": "kt-foreign-1-2-2"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": null,
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "SHORT_OR_FOREIGN_WITH_KM",
+        "premiumMinExact": "7607.98584",
+        "premiumMaxExact": "47121.6564",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-foreign-1-2-2",
+            "value": "30",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KP",
+            "rowId": "kp-1",
+            "value": "0.2",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 2 подпункт 1.2 строка 2.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-novosibirsk-before-amendment",
+      "title": "Новосибирск 21.06.2026: КТ 3,12 до вступления поправки",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-06-21",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-60-4",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-01-01",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "3956.1526368",
+        "premiumMaxExact": "24503.261328",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-60-4",
+            "value": "3.12",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 2 пункт 1 строка 60.4 в редакции 7204-У.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-novosibirsk-after-amendment",
+      "title": "Новосибирск 22.06.2026: КТ 2,34 по Указанию 7349-У",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-06-22",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-60-4",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "2967.1144776",
+        "premiumMaxExact": "18377.445996",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-60-4",
+            "value": "2.34",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: Указание 7349-У, строка 60.4.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-kstovo-before-amendment",
+      "title": "Кстово 21.06.2026: строка 58.3 ещё действует",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-06-21",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL"
+          ],
+          "tariffOwnerType": "INDIVIDUAL",
+          "territoryId": "kt-58-3",
+          "legalOwnerKbm": null
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-01-01",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "1470.8772624",
+        "premiumMaxExact": "9110.186904",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-2",
+            "value": null,
+            "min": "1399",
+            "max": "8665"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-58-3",
+            "value": "1.16",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-6",
+            "value": "0.83",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "0.91",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 2 пункт 1 строка 58.3 в редакции 7204-У.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    },
+    {
+      "id": "osago-multiple-owners-explicit-tariff-owner",
+      "title": "Несколько собственников: применяется явно выбранный собственник по документам",
+      "category": "insurance",
+      "calculator": "osago-calculator",
+      "sourcePath": "/auto/osago-calculator",
+      "input": {
+        "policyStartDate": "2026-08-27",
+        "scenario": {
+          "kind": "STANDARD",
+          "usagePeriodCode": "MONTHS_OVER_9"
+        },
+        "vehicle": {
+          "kind": "CAR",
+          "power": {
+            "value": "106",
+            "unit": "HP"
+          },
+          "mass": null,
+          "busSubtype": null,
+          "regularRoutes": false,
+          "usedAsTaxi": false,
+          "registration": {
+            "kind": "RUSSIA"
+          }
+        },
+        "owner": {
+          "ownerTypes": [
+            "INDIVIDUAL",
+            "LEGAL"
+          ],
+          "tariffOwnerType": "LEGAL",
+          "territoryId": "kt-82",
+          "legalOwnerKbm": {
+            "source": "USER_PROVIDED",
+            "value": "0.74"
+          }
+        },
+        "access": {
+          "kind": "RESTRICTED",
+          "drivers": [
+            {
+              "id": "driver-1",
+              "ageInput": "BIRTH_DATE",
+              "experienceInput": "LICENSE_DATE",
+              "kbm": {
+                "source": "USER_PROVIDED",
+                "value": "0.83"
+              }
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ruleGeneration": "2026-06-22",
+        "formulaCode": "RU_STANDARD_WITH_KM",
+        "premiumMinExact": "1895.5617408",
+        "premiumMaxExact": "17227.619136",
+        "coefficients": [
+          {
+            "code": "TB",
+            "rowId": "tb-2-1",
+            "value": null,
+            "min": "724",
+            "max": "6580"
+          },
+          {
+            "code": "KT",
+            "rowId": "kt-82",
+            "value": "1.8",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KBM",
+            "rowId": "kbm-class-8",
+            "value": "0.74",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KVS",
+            "rowId": "kvs-5-1-6-10",
+            "value": "1.638",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KO",
+            "rowId": "ko-2",
+            "value": "1",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KM",
+            "rowId": "km-car-4",
+            "value": "1.2",
+            "min": null,
+            "max": null
+          },
+          {
+            "code": "KS",
+            "rowId": "ks-8",
+            "value": "1",
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "tolerance": {
+        "premiumMinExact": "exact",
+        "premiumMaxExact": "exact"
+      },
+      "standards": [
+        "Указание Банка России от 09.10.2025 № 7204-У"
+      ],
+      "notes": [
+        "Ячейки выписаны вручную: приложение 4 пункт 3.",
+        "Результат нормативный: базовую ставку внутри тарифного коридора выбирает страховщик, поэтому итог является диапазоном, а не ценой полиса."
+      ],
+      "oracle": {
+        "type": "normative_manual",
+        "description": "Ячейки официальных таблиц выписаны вручную по номерам строк, произведение посчитано отдельной реализацией десятичной арифметики вне production-движка.",
+        "independentFromRuntime": true,
+        "reviewedAt": "2026-07-28",
+        "methodologyVersion": "osago-normative-2026-08-27",
+        "calculatorVersion": "osago-engine-1",
+        "source": {
+          "name": "Указание Банка России от 09.10.2025 № 7204-У",
+          "url": "https://www.cbr.ru/Queries/UniDbQuery/File/90134/7421"
+        }
+      }
+    }
+  ]
+}

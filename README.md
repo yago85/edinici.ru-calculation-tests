@@ -12,9 +12,9 @@ Each case has an `oracle` object. The current production-engine outputs are mark
 
 Current public export:
 
-- Golden cases: 66
-- Source commit: 6e6f9d22f51295e8f2229f03b3f048f4acfe4a40 (clean working tree at export)
-- Source release verification: passed at 2026-08-30T23:45:13.579Z
+- Golden cases: 89
+- Source commit: 44158fca803e4e0ccb921edd557979b7dba54862 (clean working tree at export)
+- Source release verification: passed at 2026-09-08T16:46:25.372Z
 - Methodology page: https://edinici.ru/methodology#avtotesty
 
 ### Accuracy model
@@ -27,6 +27,7 @@ Current public export:
 ### Repository structure
 
 - `tests/fintech/` - deposits, loans, mortgages, auto credit and salary golden cases.
+- `tests/insurance/` - OSAGO normative range golden cases derived from Bank of Russia tariff tables.
 - `tests/engineering/` - unit conversion golden cases.
 - `tests/health/` - BMI, body-fat, calorie, water and pregnancy calculator golden cases.
 - `tests/summary.json` - export summary, source revision and publication status.
@@ -42,9 +43,9 @@ Current public export:
 
 Текущий публичный экспорт:
 
-- Golden cases: 66
-- Commit исходного проекта: 6e6f9d22f51295e8f2229f03b3f048f4acfe4a40 (рабочее дерево при экспорте: clean)
-- Проверка исходной версии перед экспортом: пройдена, 2026-08-30T23:45:13.579Z
+- Golden cases: 89
+- Commit исходного проекта: 44158fca803e4e0ccb921edd557979b7dba54862 (рабочее дерево при экспорте: clean)
+- Проверка исходной версии перед экспортом: пройдена, 2026-09-08T16:46:25.372Z
 - Страница методологии: https://edinici.ru/methodology#avtotesty
 
 ### Архитектура точности

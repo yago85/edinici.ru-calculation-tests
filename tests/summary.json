@@ -1,21 +1,22 @@
 {
   "schemaVersion": "2026-07-28",
-  "generatedAt": "2026-08-31T05:16:16.012Z",
+  "generatedAt": "2026-09-08T19:03:41.117Z",
   "repository": "https://github.com/yago85/edinici.ru-calculation-tests",
   "site": "https://edinici.ru",
   "methodology": "https://edinici.ru/methodology#avtotesty",
   "sourceRevision": {
-    "commitSha": "6e6f9d22f51295e8f2229f03b3f048f4acfe4a40",
+    "commitSha": "44158fca803e4e0ccb921edd557979b7dba54862",
     "workingTree": "clean"
   },
-  "publicGoldenCases": 66,
+  "publicGoldenCases": 89,
   "categories": {
     "fintech": 13,
+    "insurance": 23,
     "engineering": 46,
     "health": 7
   },
   "releaseEvidence": {
     "status": "passed",
-    "verifiedAt": "2026-08-30T23:45:13.579Z"
+    "verifiedAt": "2026-09-08T16:46:25.372Z"
   }
 }
