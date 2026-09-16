@@ -1,11 +1,11 @@
 {
   "schemaVersion": "2026-07-28",
-  "generatedAt": "2026-09-14T21:51:21.116Z",
+  "generatedAt": "2026-09-16T09:13:00.303Z",
   "project": "Edinici.ru public calculation golden cases",
   "source": {
     "site": "https://edinici.ru",
     "methodology": "https://edinici.ru/methodology#avtotesty",
-    "commitSha": "70c96c3e230945ba7b643e9e9b6b10d8a53a53cc",
+    "commitSha": "6c5f54fb28602ee64de2e1bf5579b39fe3279f69",
     "workingTree": "clean"
   },
   "cases": [
