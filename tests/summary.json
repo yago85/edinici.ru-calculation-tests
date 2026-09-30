@@ -1,11 +1,11 @@
 {
   "schemaVersion": "2026-07-28",
-  "generatedAt": "2026-09-30T08:57:19.276Z",
+  "generatedAt": "2026-09-30T12:20:28.243Z",
   "repository": "https://github.com/yago85/edinici.ru-calculation-tests",
   "site": "https://edinici.ru",
   "methodology": "https://edinici.ru/methodology#avtotesty",
   "sourceRevision": {
-    "commitSha": "a08236dd921a1c501a9bb922d086982fadfa8613",
+    "commitSha": "f092af62ab0eebfd03a1b439dc3ee417000ffd16",
     "workingTree": "clean"
   },
   "publicGoldenCases": 89,
@@ -17,6 +17,6 @@
   },
   "releaseEvidence": {
     "status": "passed",
-    "verifiedAt": "2026-09-30T08:55:11.522Z"
+    "verifiedAt": "2026-09-30T11:56:37.379Z"
   }
 }
