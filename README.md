@@ -13,8 +13,8 @@ Each case has an `oracle` object. The current production-engine outputs are mark
 Current public export:
 
 - Golden cases: 89
-- Source commit: b6fda6551350d72ffa56b14c4e123ccc3ddc5311 (clean working tree at export)
-- Source release verification: passed at 2026-10-20T02:28:25.388Z
+- Source commit: 7b38b93e2a170876432cec60a7ad9f3b2700fd7f (clean working tree at export)
+- Source release verification: passed at 2026-10-27T06:46:39.927Z
 - Methodology page: https://edinici.ru/methodology#avtotesty
 
 ### Accuracy model
@@ -44,8 +44,8 @@ Current public export:
 Текущий публичный экспорт:
 
 - Golden cases: 89
-- Commit исходного проекта: b6fda6551350d72ffa56b14c4e123ccc3ddc5311 (рабочее дерево при экспорте: clean)
-- Проверка исходной версии перед экспортом: пройдена, 2026-10-20T02:28:25.388Z
+- Commit исходного проекта: 7b38b93e2a170876432cec60a7ad9f3b2700fd7f (рабочее дерево при экспорте: clean)
+- Проверка исходной версии перед экспортом: пройдена, 2026-10-27T06:46:39.927Z
 - Страница методологии: https://edinici.ru/methodology#avtotesty
 
 ### Архитектура точности
