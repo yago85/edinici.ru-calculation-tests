@@ -12,22 +12,26 @@ function walk(dir) {
   });
 }
 
+const summary = JSON.parse(readFileSync(join(testsDir, "summary.json"), "utf8"));
+if (
+  summary.releaseEvidence?.status !== "passed" ||
+  !Number.isFinite(Date.parse(summary.releaseEvidence?.verifiedAt)) ||
+  !/^[a-f0-9]{40}$/.test(summary.sourceRevision?.commitSha ?? "") ||
+  summary.sourceRevision?.workingTree !== "clean" ||
+  summary.releaseEvidence?.sourceSha !== summary.sourceRevision?.commitSha ||
+  !/^[a-f0-9]{64}$/.test(summary.releaseEvidence?.qaReportSha256 ?? "") ||
+  !/^v[0-9A-Za-z._-]+$/.test(summary.releaseEvidence?.release ?? "")
+) throw new Error("summary.json: incomplete bound release evidence");
+
 const files = walk(testsDir).filter((path) => path.endsWith(".json"));
 let cases = 0;
 
 for (const file of files) {
   const payload = JSON.parse(readFileSync(file, "utf8"));
-  if (file.endsWith("summary.json")) {
-    if (
-      payload.releaseEvidence?.status !== "passed" ||
-      !payload.releaseEvidence?.verifiedAt ||
-      !payload.sourceRevision?.commitSha ||
-      !payload.sourceRevision?.workingTree
-    ) {
-      throw new Error(`${file}: incomplete release evidence`);
-    }
-    continue;
-  }
+  if (file.endsWith("summary.json")) continue;
+  if (payload.source?.commitSha !== summary.sourceRevision.commitSha ||
+      payload.source?.workingTree !== "clean")
+    throw new Error(`${file}: source differs from release summary`);
   if (!payload.schemaVersion || !Array.isArray(payload.cases)) {
     throw new Error(`${file}: expected schemaVersion and cases[]`);
   }
@@ -70,5 +74,8 @@ for (const file of files) {
     cases += 1;
   }
 }
+
+if (cases !== summary.publicGoldenCases)
+  throw new Error("summary.json: golden case count differs from datasets");
 
 console.log(`Validated ${cases} public golden cases across ${files.length - 1} dataset files.`);

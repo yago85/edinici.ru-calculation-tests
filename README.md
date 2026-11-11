@@ -13,8 +13,8 @@ Each case has an `oracle` object. The current production-engine outputs are mark
 Current public export:
 
 - Golden cases: 89
-- Source commit: f1a843e08835ffe2cf1423165c7671442aa5b42f (clean working tree at export)
-- Source release verification: passed at 2026-11-01T18:29:21.897Z
+- Source commit: d2094d64b24c29842e31056bbc07a5039c9582cb (clean working tree at export)
+- Source release verification: passed at 2026-11-11T18:11:08.939Z
 - Methodology page: https://edinici.ru/methodology#avtotesty
 
 ### Accuracy model
@@ -44,8 +44,8 @@ Current public export:
 Текущий публичный экспорт:
 
 - Golden cases: 89
-- Commit исходного проекта: f1a843e08835ffe2cf1423165c7671442aa5b42f (рабочее дерево при экспорте: clean)
-- Проверка исходной версии перед экспортом: пройдена, 2026-11-01T18:29:21.897Z
+- Commit исходного проекта: d2094d64b24c29842e31056bbc07a5039c9582cb (рабочее дерево при экспорте: clean)
+- Проверка исходной версии перед экспортом: пройдена, 2026-11-11T18:11:08.939Z
 - Страница методологии: https://edinici.ru/methodology#avtotesty
 
 ### Архитектура точности
@@ -72,7 +72,7 @@ node scripts/validate-golden-cases.mjs
 The public datasets are generated from the main Edinici.ru repository by:
 
 ```bash
-npm run export:public-tests
+npm run release:prepare -- <tag>
 ```
 
 ## Contacts
