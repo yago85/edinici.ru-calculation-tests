@@ -1,11 +1,11 @@
 {
   "schemaVersion": "2026-07-28",
-  "generatedAt": "2026-11-24T12:24:21.377Z",
+  "generatedAt": "2026-11-24T20:15:10.293Z",
   "project": "Edinici.ru public calculation golden cases",
   "source": {
     "site": "https://edinici.ru",
     "methodology": "https://edinici.ru/methodology#avtotesty",
-    "commitSha": "5a918a6f6ac9a365ab73882a0c381681a6786f18",
+    "commitSha": "1281ae6a2cf02d2b0d8225892d2918ad9926d735",
     "workingTree": "clean"
   },
   "cases": [
@@ -105,12 +105,12 @@
         "events": []
       },
       "expected": {
-        "finalBalance": 112682.05,
-        "grossFinal": 112682.05,
+        "finalBalance": 112682.3,
+        "grossFinal": 112682.3,
         "paidOut": 0,
-        "totalInterest": 12682.05,
+        "totalInterest": 12682.3,
         "totalTaxRub": 0,
-        "netProfit": 12682.05,
+        "netProfit": 12682.3,
         "contributions": 100000,
         "withdrawals": 0,
         "endDate": "2026-01-01",
@@ -184,12 +184,12 @@
         ]
       },
       "expected": {
-        "finalBalance": 762853.05,
-        "grossFinal": 762853.05,
+        "finalBalance": 762855.39,
+        "grossFinal": 762855.39,
         "paidOut": 0,
-        "totalInterest": 92853.05,
+        "totalInterest": 92855.39,
         "totalTaxRub": 0,
-        "netProfit": 92853.05,
+        "netProfit": 92855.39,
         "contributions": 700000,
         "withdrawals": 30000,
         "endDate": "2026-01-01",
@@ -246,16 +246,16 @@
         "events": []
       },
       "expected": {
-        "finalBalance": 7434331.53,
-        "grossFinal": 7434331.53,
+        "finalBalance": 7434258.28,
+        "grossFinal": 7434258.28,
         "paidOut": 0,
-        "totalInterest": 2434331.53,
-        "totalTaxRub": 312563.1,
-        "netProfit": 2121768.43,
+        "totalInterest": 2434258.28,
+        "totalTaxRub": 312553.57,
+        "netProfit": 2121704.71,
         "contributions": 5000000,
         "withdrawals": 0,
         "endDate": "2027-01-01",
-        "issueCount": 1
+        "issueCount": 0
       },
       "tolerance": {
         "moneyRub": 1,
